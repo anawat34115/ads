@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad Hub Marketplace - Portfolio</title>
+    <meta
+      name="description"
+      content="รวมผลงานแคมเปญ billboard, digital LED และ transit media ของ Ad Hub Marketplace พร้อมตัวอย่าง success stories สำหรับแบรนด์ที่ต้องการทำโฆษณานอกบ้านในประเทศไทย"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --nav-bg: rgba(28, 35, 49, 0.8);
+        --footer-navy: #1a1a3a;
+        --cta-green: #00e676;
+        --brand-purple: #5800ff;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-display {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      button,
+      .button-text,
+      nav a {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden bg-white text-gray-800">
+    <div class="min-h-screen overflow-x-hidden bg-white text-gray-800">
+      <nav class="absolute left-0 top-6 z-50 w-full">
+        <div class="mx-auto max-w-6xl px-4">
+          <div
+            class="flex items-center justify-between rounded-full border border-white/10 px-6 py-3 shadow-2xl backdrop-blur-md"
+            style="background: var(--nav-bg)"
+          >
+            <a href="index.html" class="flex cursor-pointer items-center gap-2">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0L40 40H0L20 0Z" fill="url(#paint0_linear)" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3B82F6"></stop>
+                    <stop offset="0.5" stop-color="#8B5CF6"></stop>
+                    <stop offset="1" stop-color="#10B981"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-lg font-bold leading-tight text-white">Ad Hub</span>
+                <span class="text-[10px] leading-tight tracking-[0.2em] text-gray-300">Marketplace</span>
+              </div>
+            </a>
+
+            <div class="hidden items-center space-x-8 text-sm text-gray-200 md:flex">
+              <a href="index.html" class="transition hover:text-white">Home</a>
+              <a href="page2.html" class="transition hover:text-white">About Us</a>
+              <a href="page3.html" class="font-bold text-white transition">Portfolio</a>
+              <a href="page4.html" class="transition hover:text-white">Partner with Us</a>
+              <a href="page5.html" class="transition hover:text-white">Blog</a>
+              <a href="page6.html" class="transition hover:text-white">Contact Us</a>
+            </div>
+
+            <div class="hidden md:block">
+              <button class="rounded-full border border-blue-500 px-6 py-2 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500 hover:text-white">
+                Partner Login
+              </button>
+            </div>
+
+            <button id="menuButton" class="text-white md:hidden" type="button" aria-label="Toggle menu">
+              <span id="menuOpenIcon">&#9776;</span>
+              <span id="menuCloseIcon" class="hidden">&#10005;</span>
+            </button>
+          </div>
+
+          <div id="mobileMenu" class="mt-4 hidden rounded-3xl bg-slate-900/95 px-6 py-5 text-sm text-white shadow-xl md:hidden">
+            <div class="flex flex-col gap-4">
+              <a href="index.html" class="border-b border-white/10 pb-3">Home</a>
+              <a href="page2.html" class="border-b border-white/10 pb-3">About Us</a>
+              <a href="page3.html" class="border-b border-white/10 pb-3 font-bold text-white">Portfolio</a>
+              <a href="page4.html" class="border-b border-white/10 pb-3">Partner with Us</a>
+              <a href="page5.html" class="border-b border-white/10 pb-3">Blog</a>
+              <a href="page6.html" class="border-b border-white/10 pb-3">Contact Us</a>
+              <button class="mt-2 rounded-full border border-blue-500 px-6 py-2 text-left text-blue-400">Partner Login</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="about" class="relative bg-[#0b1329] px-4 pb-20 pt-40 text-white">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop"
+            alt="Bangkok Night Out of Home Ads"
+            class="h-full w-full object-cover opacity-20"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0b1329] via-[#0b1329]/80 to-[#0b1329]"></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-6xl text-center">
+          <h1 class="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl">
+            Our Work &amp; <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Success Stories</span>
+          </h1>
+          <p class="mx-auto max-w-3xl text-xl font-light leading-relaxed text-gray-300">
+            รวมผลงานแคมเปญโฆษณานอกบ้านที่สร้างความโดดเด่น และเข้าถึงกลุ่มเป้าหมายได้อย่างทรงพลัง ผ่านเครือข่ายสื่อที่ครอบคลุมที่สุดของเรา
+          </p>
+        </div>
+      </section>
+
+      <section class="border-b border-gray-100 bg-white py-12">
+        <div class="mx-auto max-w-6xl px-4 text-center">
+          <p class="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-gray-400">Trusted by Leading Brands</p>
+          <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 md:gap-16">
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Microsoft</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Samsung</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Toyota</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Coca-Cola</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Netflix</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Spotify</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Unilever</div>
+            <div class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 transition-all hover:text-blue-600 hover:opacity-100 md:text-3xl">Honda</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="min-h-[600px] bg-gray-50 py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">
+            <h2 class="flex items-center gap-2 text-3xl font-bold text-gray-900">
+              <span class="text-[#5800FF]">⌕</span> Campaign Highlights
+            </h2>
+
+            <div class="flex flex-wrap justify-center gap-2">
+              <button data-filter="All" class="filter-btn rounded-full bg-[#5800FF] px-5 py-2 text-sm font-semibold text-white shadow-md shadow-purple-500/30 transition-all duration-300">All</button>
+              <button data-filter="Digital LED" class="filter-btn rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-semibold text-gray-600 transition-all duration-300 hover:bg-gray-100">Digital LED</button>
+              <button data-filter="Premium Billboard" class="filter-btn rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-semibold text-gray-600 transition-all duration-300 hover:bg-gray-100">Premium Billboard</button>
+              <button data-filter="Transit" class="filter-btn rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-semibold text-gray-600 transition-all duration-300 hover:bg-gray-100">Transit</button>
+            </div>
+          </div>
+
+          <div id="portfolioGrid" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article data-category="Digital LED" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="Automotive Launch Campaign" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Toyota</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Digital LED</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">Automotive Launch Campaign</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>Paragon / CBD</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="Premium Billboard" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop" alt="Summer Beverage Refresh" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Coca-Cola</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Premium Billboard</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">Summer Beverage Refresh</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>Expressway Rama 9</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="Transit" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop" alt="New Series Premiere" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Netflix</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Transit</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">New Series Premiere</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>BTS Skytrain Wrap</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="Digital LED" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" alt="Tech Flagship Phone" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Samsung</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Digital LED</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">Tech Flagship Phone</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>Asoke Intersection</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="Premium Billboard" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=1000&auto=format&fit=crop" alt="Music Festival Promo" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Spotify</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Premium Billboard</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">Music Festival Promo</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>Ekamai-Ramindra</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="Transit" class="portfolio-card group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gray-900 shadow-lg">
+              <img src="https://images.unsplash.com/photo-1528731700628-360e7f7243c3?q=80&w=1000&auto=format&fit=crop" alt="Global Beauty Campaign" class="h-full w-full object-cover opacity-90 transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div class="absolute right-4 top-4 translate-y-[-10px] rounded-full bg-white/95 px-3 py-1.5 text-xs font-black text-[#5800FF] opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">Unilever</div>
+              <div class="absolute bottom-0 left-0 w-full translate-y-6 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <span class="mb-3 inline-block rounded bg-[#00E676] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-900">Transit</span>
+                <h3 class="mb-2 text-2xl font-bold leading-tight text-white">Global Beauty Campaign</h3>
+                <div class="flex items-center justify-between text-gray-300">
+                  <div class="flex items-center text-sm"><span class="mr-1 text-[#00E676]">⌖</span>MRT Station Domination</div>
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur transition-colors hover:bg-white/40">→</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div id="emptyState" class="hidden py-20 text-center">
+            <p class="text-lg text-gray-500">ไม่พบผลงานในหมวดหมู่นี้</p>
+          </div>
+
+          <div class="mt-16 text-center">
+            <button class="rounded-xl border-2 border-gray-200 bg-white px-8 py-3 font-bold text-gray-700 shadow-sm transition-colors hover:border-blue-500 hover:text-blue-600">
+              Load More Projects
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div class="mx-auto max-w-4xl px-4 text-center">
+          <h2 class="mb-6 text-3xl font-bold text-white">อยากให้แบรนด์ของคุณโดดเด่นแบบนี้ไหม?</h2>
+          <p class="mb-8 text-lg text-blue-100">
+            ปรึกษาผู้เชี่ยวชาญของเราเพื่อวางแผนสื่อโฆษณาที่ตรงเป้าหมาย และคุ้มค่าที่สุดสำหรับแคมเปญต่อไปของคุณ
+          </p>
+          <button class="rounded-xl bg-[#00E676] px-8 py-4 font-bold text-gray-900 shadow-lg transition-transform hover:-translate-y-1 hover:bg-[#00C853]">
+            ติดต่อทีมงาน Ad Hub
+          </button>
+        </div>
+      </section>
+
+      <section id="locations" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 text-center">
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">Campaign Results</p>
+            <h2 class="mb-4 text-3xl font-bold text-gray-900">ผลงานที่สะท้อนความเชี่ยวชาญด้าน OOH ของเรา</h2>
+            <p class="mx-auto max-w-3xl text-lg text-gray-600">
+              จาก automotive, FMCG, entertainment, tech และ real estate เราช่วยให้แบรนด์เลือก format ที่เหมาะกับพื้นที่และจังหวะการสื่อสารมากที่สุด
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Brand Launches</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                เหมาะสำหรับการเปิดตัวสินค้า บริการ หรือแคมเปญใหม่ ด้วยสื่อที่สร้าง visibility สูงในช่วงเวลาสำคัญ
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Citywide Awareness</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                ใช้เครือข่าย billboard, LED และ transit media ร่วมกัน เพื่อสร้างความถี่ในการมองเห็นในหลาย touchpoints ตลอดเส้นทางการเดินทาง
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Location-Based Strategy</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                เลือกทำเลจากพฤติกรรมผู้บริโภคและศักยภาพของพื้นที่ ช่วยให้สื่อโฆษณานอกบ้านตอบโจทย์กลุ่มเป้าหมายได้แม่นยำขึ้น
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="resources" class="pt-16 pb-8 text-white" style="background: var(--footer-navy)">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Site</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li><a href="page2.html" class="hover:text-white">About Us</a></li>
+                <li><a href="page3.html" class="hover:text-white">Portfolio</a></li>
+                <li><a href="page4.html" class="hover:text-white">Partner with Us</a></li>
+                <li><a href="page5.html" class="hover:text-white">Blog</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+
+              <h4 class="mb-4 mt-8 text-lg font-bold">Follow Us</h4>
+              <div class="flex gap-3">
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">f</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">t</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">in</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Company</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="page4.html" class="hover:text-white">Agency</a></li>
+                <li><a href="page2.html" class="hover:text-white">Company</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-1 flex flex-col gap-8 md:col-span-2 md:flex-row">
+              <div class="flex-1">
+                <h4 class="mb-4 text-lg font-bold">Contact</h4>
+                <form class="space-y-3">
+                  <input type="text" placeholder="Name" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="text" placeholder="Company" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <textarea placeholder="Message" rows="2" class="w-full resize-none rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                  <button type="button" class="rounded px-6 py-2 text-sm font-bold text-gray-900 transition-colors hover:bg-green-500" style="background: var(--cta-green)">
+                    Submit
+                  </button>
+                </form>
+              </div>
+
+              <div class="mt-8 flex flex-1 flex-col items-start justify-center border-t border-white/10 pt-8 text-left md:mt-0 md:items-end md:border-none md:pt-0 md:text-right">
+                <h4 class="mb-2 text-lg font-bold">OWN A BILLBOARD?</h4>
+                <p class="mb-4 text-sm text-gray-300">Join our network.</p>
+                <button class="rounded px-6 py-2 text-sm font-bold text-gray-900 transition-colors hover:bg-green-500" style="background: var(--cta-green)">
+                  Partner Registration
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-between border-t border-white/10 pt-6 text-center text-xs text-gray-500 md:flex-row md:text-left">
+            <p>&copy; 2026 AdHub Marketplace. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">info@adhubmarketplace.com</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioCards = document.querySelectorAll(".portfolio-card");
+      const emptyState = document.getElementById("emptyState");
+      const portfolioGrid = document.getElementById("portfolioGrid");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden");
+        menuCloseIcon.classList.toggle("hidden");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+        });
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const activeFilter = button.dataset.filter;
+
+          filterButtons.forEach((btn) => {
+            btn.className =
+              "filter-btn rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-semibold text-gray-600 transition-all duration-300 hover:bg-gray-100";
+          });
+
+          button.className =
+            "filter-btn rounded-full bg-[#5800FF] px-5 py-2 text-sm font-semibold text-white shadow-md shadow-purple-500/30 transition-all duration-300";
+
+          let visibleCount = 0;
+
+          portfolioCards.forEach((card) => {
+            const category = card.dataset.category;
+            const shouldShow = activeFilter === "All" || category === activeFilter;
+
+            if (shouldShow) {
+              card.classList.remove("hidden");
+              visibleCount += 1;
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+
+          if (visibleCount === 0) {
+            emptyState.classList.remove("hidden");
+            portfolioGrid.classList.add("hidden");
+          } else {
+            emptyState.classList.add("hidden");
+            portfolioGrid.classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

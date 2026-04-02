@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad Hub Marketplace</title>
+    <meta
+      name="description"
+      content="Ad Hub Marketplace ให้บริการสื่อโฆษณานอกบ้านในประเทศไทย ครอบคลุม billboard, digital LED screen, transit media และบริการวางแผนแคมเปญ OOH สำหรับแบรนด์และเอเจนซี่"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --nav-bg: rgba(28, 35, 49, 0.8);
+        --hero-overlay: rgba(0, 0, 0, 0.6);
+        --service-purple: #5800ff;
+        --footer-navy: #1a1a3a;
+        --cta-green: #00e676;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-display {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      button,
+      .button-text,
+      nav a {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
+        display: flex;
+        width: max-content;
+      }
+
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+
+      .icon-box svg {
+        width: 48px;
+        height: 48px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden bg-white text-gray-800">
+    <div class="min-h-screen bg-white text-gray-800">
+      <section class="relative flex min-h-[85vh] flex-col items-center justify-center px-4 pb-32 pt-28">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2574&auto=format&fit=crop"
+            alt="Bangkok Cityscape"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0" style="background: var(--hero-overlay)"></div>
+          <div class="absolute bottom-0 h-32 w-full bg-gradient-to-t from-white to-transparent"></div>
+        </div>
+
+        <nav class="absolute left-0 top-6 z-50 w-full">
+          <div class="mx-auto max-w-6xl px-4">
+            <div
+              class="flex items-center justify-between rounded-full border border-white/10 px-6 py-3 shadow-2xl backdrop-blur-md"
+              style="background: var(--nav-bg)"
+            >
+              <a href="index.html" class="flex cursor-pointer items-center gap-2">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 0L40 40H0L20 0Z" fill="url(#paint0_linear)" />
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#3B82F6"></stop>
+                      <stop offset="0.5" stop-color="#8B5CF6"></stop>
+                      <stop offset="1" stop-color="#10B981"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="flex flex-col">
+                  <span class="text-lg font-bold leading-tight text-white">Ad Hub</span>
+                  <span class="text-[10px] leading-tight tracking-[0.2em] text-gray-300">Marketplace</span>
+                </div>
+              </a>
+
+              <div class="hidden items-center space-x-8 text-sm text-gray-200 md:flex">
+                <a href="index.html" class="font-bold text-white transition">Home</a>
+                <a href="page2.html" class="transition hover:text-white">About Us</a>
+                <a href="page3.html" class="transition hover:text-white">Portfolio</a>
+                <a href="page4.html" class="transition hover:text-white">Partner with Us</a>
+                <a href="page5.html" class="transition hover:text-white">Blog</a>
+                <a href="page6.html" class="transition hover:text-white">Contact Us</a>
+              </div>
+
+              <div class="hidden md:block">
+                <button class="rounded-full border border-blue-500 px-6 py-2 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500 hover:text-white">
+                  Partner Login
+                </button>
+              </div>
+
+              <button id="menuButton" class="text-white md:hidden" type="button" aria-label="Toggle menu">
+                <span id="menuOpenIcon">&#9776;</span>
+                <span id="menuCloseIcon" class="hidden">&#10005;</span>
+              </button>
+            </div>
+
+            <div id="mobileMenu" class="mt-4 hidden rounded-3xl bg-slate-900/95 px-6 py-5 text-sm text-white shadow-xl md:hidden">
+              <div class="flex flex-col gap-4">
+                <a href="index.html" class="border-b border-white/10 pb-3 font-bold text-white">Home</a>
+                <a href="page2.html" class="border-b border-white/10 pb-3">About Us</a>
+                <a href="page3.html" class="border-b border-white/10 pb-3">Portfolio</a>
+                <a href="page4.html" class="border-b border-white/10 pb-3">Partner with Us</a>
+                <a href="page5.html" class="border-b border-white/10 pb-3">Blog</a>
+                <a href="page6.html" class="border-b border-white/10 pb-3">Contact Us</a>
+                <button class="mt-2 rounded-full border border-blue-500 px-6 py-2 text-left text-blue-400">Partner Login</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="relative z-10 mx-auto mt-12 max-w-5xl text-center">
+          <h1 class="mb-6 text-4xl font-bold uppercase leading-tight tracking-wide text-white md:text-5xl lg:text-6xl">
+            Your Gateway To Effective <br />
+            Out-Of-Home Advertising <br />
+            In Thailand
+          </h1>
+          <p class="mx-auto mb-10 max-w-3xl text-lg font-light text-gray-200 md:text-xl">
+            Explore. Book. Maximize your brand's reach across a comprehensive network of billboards, LED screens, and transit media.
+          </p>
+
+          <div class="flex flex-col justify-center gap-6 sm:flex-row">
+            <button class="flex min-w-[280px] flex-col items-center justify-center rounded-xl border-2 border-cyan-400 bg-[#0b1329]/80 px-8 py-4 font-bold text-white backdrop-blur transition-all hover:bg-[#0b1329]">
+              <span class="text-sm tracking-wider">FIND BILLBOARDS ON MAP</span>
+              <span class="mt-1 text-xs font-normal text-gray-400">adhub.ltd</span>
+            </button>
+
+            <button class="flex min-w-[280px] flex-col items-center justify-center rounded-xl bg-purple-700 px-8 py-4 font-bold text-white shadow-lg shadow-purple-500/30 transition-all hover:bg-purple-800">
+              <span class="text-sm tracking-wider">BOOK ONLINE NOW</span>
+              <span class="mt-1 text-xs font-normal text-purple-200">billboardthai.com</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="relative z-20 mx-auto -mt-20 mb-12 max-w-6xl px-4">
+        <div class="rounded-3xl p-8 shadow-2xl md:p-12" style="background: var(--service-purple)">
+          <h2 class="mb-10 text-center text-3xl font-bold text-white">Our Services</h2>
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
+              <div class="icon-box mb-4 flex justify-center text-teal-500">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2"></rect>
+                  <line x1="8" y1="20" x2="16" y2="20"></line>
+                  <line x1="12" y1="18" x2="12" y2="20"></line>
+                </svg>
+              </div>
+              <h3 class="mb-3 flex h-10 items-center justify-center text-sm font-bold uppercase text-gray-900">Digital LED Screens</h3>
+              <p class="mb-4 text-xs leading-relaxed text-gray-600">
+                Explore, Book, Maximize your brand's comprehensive network of billboards, LED screens, media.
+              </p>
+              <a href="#" class="text-sm font-bold text-blue-700 hover:underline">Learn More</a>
+            </article>
+
+            <article class="rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
+              <div class="icon-box mb-4 flex justify-center text-blue-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="12" rx="2"></rect>
+                  <polygon points="10,9 16,12 10,15"></polygon>
+                </svg>
+              </div>
+              <h3 class="mb-3 flex h-10 items-center justify-center text-sm font-bold uppercase text-gray-900">Premium Billboards</h3>
+              <p class="mb-4 text-xs leading-relaxed text-gray-600">
+                Explore, Book, Maximize your brand's comprehensive network of billboards, LED screens, media.
+              </p>
+              <a href="#" class="text-sm font-bold text-blue-700 hover:underline">Learn More</a>
+            </article>
+
+            <article class="rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
+              <div class="icon-box mb-4 flex justify-center text-indigo-800">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 16V9a2 2 0 0 1 2-2h8l4 4v5"></path>
+                  <circle cx="7.5" cy="17.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="17.5" r="1.5"></circle>
+                  <path d="M4 14h16"></path>
+                </svg>
+              </div>
+              <h3 class="mb-3 flex h-10 items-center justify-center text-sm font-bold uppercase text-gray-900">Transit &amp; Tuk-Tuk Ads</h3>
+              <p class="mb-4 text-xs leading-relaxed text-gray-600">
+                Transit &amp; Tuk-Tuk Ads explore brands, comprehensive network of billboards, LED screens, and transit media.
+              </p>
+              <a href="#" class="text-sm font-bold text-blue-700 hover:underline">Learn More</a>
+            </article>
+
+            <article class="rounded-2xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:-translate-y-1">
+              <div class="icon-box mb-4 flex justify-center text-teal-600">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="20" r="1"></circle>
+                  <circle cx="18" cy="20" r="1"></circle>
+                  <path d="M3 4h2l2.2 10.2a1 1 0 0 0 1 .8H19a1 1 0 0 0 1-.8L22 7H7"></path>
+                </svg>
+              </div>
+              <h3 class="mb-3 flex h-10 items-center justify-center text-sm font-bold uppercase text-gray-900">Marketplace Listings</h3>
+              <p class="mb-4 text-xs leading-relaxed text-gray-600">
+                Marketplace listings and partner entities pre-existing networks and transit media.
+              </p>
+              <a href="#" class="text-sm font-bold text-blue-700 hover:underline">Learn More</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden border-b border-gray-100 bg-white py-10">
+        <div class="mx-auto mb-6 max-w-6xl px-4 text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.3em] text-gray-400">Trusted by Leading Brands</p>
+        </div>
+
+        <div class="relative flex w-full items-center">
+          <div class="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent md:w-48"></div>
+
+          <div class="animate-scroll items-center gap-16 px-8 md:gap-24">
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Microsoft</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">WordPress</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Google</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Spotify</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Amazon</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Netflix</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Meta</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Apple</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Samsung</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Toyota</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Microsoft</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">WordPress</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Google</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Spotify</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Amazon</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Netflix</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Meta</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Apple</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Samsung</span>
+            <span class="cursor-pointer text-2xl font-black uppercase tracking-tight text-gray-800 opacity-40 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:text-3xl">Toyota</span>
+          </div>
+
+          <div class="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent md:w-48"></div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white py-16">
+        <div class="mx-auto max-w-5xl px-4 text-center">
+          <h2 class="mb-12 text-3xl font-bold text-gray-900">Why Choose Ad Hub</h2>
+
+          <div class="flex flex-col items-center justify-center gap-12 border-b border-t border-gray-200 py-8 md:flex-row md:gap-24">
+            <div class="text-center">
+              <div class="mb-2 text-3xl font-black text-gray-900 md:text-4xl">1,000+</div>
+              <div class="text-xs font-bold uppercase tracking-[0.25em] text-gray-600">Premium Locations</div>
+            </div>
+            <div class="hidden h-16 w-px bg-gray-200 md:block"></div>
+            <div class="text-center">
+              <div class="mb-2 text-3xl font-black text-gray-900 md:text-4xl">50+</div>
+              <div class="text-xs font-bold uppercase tracking-[0.25em] text-gray-600">Trusted Partners</div>
+            </div>
+            <div class="hidden h-16 w-px bg-gray-200 md:block"></div>
+            <div class="text-center">
+              <div class="mb-2 text-3xl font-black text-gray-900 md:text-4xl">Data</div>
+              <div class="text-xs font-bold uppercase tracking-[0.25em] text-gray-600">Driven Insights</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-16">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 text-center">
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">How It Works</p>
+            <h2 class="text-3xl font-bold text-gray-900">วางแผนและจองสื่อ OOH ได้ง่ายใน 3 ขั้นตอน</h2>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-lg font-black text-white">1</div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">ค้นหาทำเลโฆษณา</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                เลือกทำเล billboard, digital LED หรือ transit media ตามพื้นที่เป้าหมาย งบประมาณ และช่วงเวลาแคมเปญที่ต้องการ
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#5800FF] text-lg font-black text-white">2</div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">รับคำแนะนำจากทีมสื่อ</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                ทีมงานช่วยคัดเลือกสื่อโฆษณานอกบ้านที่เหมาะกับกลุ่มเป้าหมาย พร้อมแนะนำ format และ media mix ที่คุ้มค่าที่สุด
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+              <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500 text-lg font-black text-white">3</div>
+              <h3 class="mb-3 text-xl font-bold text-gray-900">จองและเริ่มแคมเปญ</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                ยืนยันการจอง ผลิตสื่อ ติดตั้ง และติดตามผลได้ครบในที่เดียว เหมาะสำหรับแบรนด์ เอเจนซี่ และธุรกิจที่ต้องการขยายการรับรู้
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" class="bg-gray-50 py-16">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-8 flex justify-between">
+            <h2 class="w-full text-center text-2xl font-bold text-gray-900">
+              Featured Success Stories<br />
+              <span class="mt-2 block text-sm font-normal text-gray-500">Success stories and campaigns on our trusted network</span>
+            </h2>
+          </div>
+
+          <div class="relative grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="absolute -right-4 top-1/2 hidden -translate-y-1/2 gap-2 lg:flex">
+              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-400 shadow transition hover:text-gray-800">←</button>
+              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-400 shadow transition hover:text-gray-800">→</button>
+            </div>
+
+            <article class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" alt="Campaign Story One" class="h-32 w-full object-cover" />
+              <div class="p-4">
+                <h4 class="mb-2 text-sm font-bold leading-tight text-gray-900">National campaign offer Bangkok dominate Thai brands</h4>
+                <p class="text-[10px] text-gray-500">National campaign offer Bangkok dominate Thai brands in key districts with high visibility.</p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" alt="Campaign Story Two" class="h-32 w-full object-cover" />
+              <div class="p-4">
+                <h4 class="mb-2 text-sm font-bold leading-tight text-gray-900">Creative real estate campaign across Bangkok</h4>
+                <p class="text-[10px] text-gray-500">Strategic placements generated strong lead volume for real estate launches across urban areas.</p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Campaign Story Three" class="h-32 w-full object-cover" />
+              <div class="p-4">
+                <h4 class="mb-2 text-sm font-bold leading-tight text-gray-900">Super successful automotive launch campaign</h4>
+                <p class="text-[10px] text-gray-500">High-impact automotive activation using digital LED inventory in prime central business districts.</p>
+              </div>
+            </article>
+
+            <article class="hidden overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm lg:block">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Campaign Story Four" class="h-32 w-full object-cover" />
+              <div class="p-4">
+                <h4 class="mb-2 text-sm font-bold leading-tight text-gray-900">FMCG brand awareness boost in transit network</h4>
+                <p class="text-[10px] text-gray-500">Dominating BTS train wraps resulting in a measurable lift in campaign recall and visibility.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-6 flex justify-center gap-1">
+            <span class="h-2 w-2 rounded-full bg-blue-600"></span>
+            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-16">
+        <div class="mx-auto max-w-5xl px-4">
+          <div class="mb-12 text-center">
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">FAQ</p>
+            <h2 class="text-3xl font-bold text-gray-900">คำถามที่พบบ่อยเกี่ยวกับสื่อโฆษณานอกบ้าน</h2>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="mb-3 text-lg font-bold text-gray-900">เหมาะกับธุรกิจแบบไหน?</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                เหมาะทั้งแบรนด์ใหญ่ ธุรกิจ SME โครงการอสังหาริมทรัพย์ รถยนต์ FMCG ร้านอาหาร และธุรกิจที่ต้องการสร้าง brand awareness ในพื้นที่เป้าหมาย
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="mb-3 text-lg font-bold text-gray-900">เลือกสื่อแบบ billboard หรือ LED ดี?</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                หากต้องการความโดดเด่นระยะยาว billboard เหมาะมาก แต่ถ้าต้องการความยืดหยุ่นและภาพเคลื่อนไหว digital LED จะตอบโจทย์แคมเปญที่ต้องการ impact สูง
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="mb-3 text-lg font-bold text-gray-900">มีบริการช่วยวางแผนสื่อหรือไม่?</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                มี ทีมงานช่วยวิเคราะห์พื้นที่ กลุ่มเป้าหมาย ระยะเวลา และงบประมาณ เพื่อเลือก media plan ที่เหมาะกับแคมเปญของลูกค้า
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="mb-3 text-lg font-bold text-gray-900">ใช้เวลาจองนานไหม?</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                ระยะเวลาขึ้นกับประเภทสื่อและช่วงเวลาที่ต้องการจอง แต่โดยทั่วไปสามารถเริ่มจากการสอบถามทำเล รับใบเสนอราคา และยืนยันแคมเปญได้อย่างรวดเร็ว
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="resources" class="pt-16 pb-8 text-white" style="background: var(--footer-navy)">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Site</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li><a href="page2.html" class="hover:text-white">About Us</a></li>
+                <li><a href="page3.html" class="hover:text-white">Portfolio</a></li>
+                <li><a href="page4.html" class="hover:text-white">Partner with Us</a></li>
+                <li><a href="page5.html" class="hover:text-white">Blog</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+
+              <h4 class="mb-4 mt-8 text-lg font-bold">Follow Us</h4>
+              <div class="flex gap-3">
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">f</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">t</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">in</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Company</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="page4.html" class="hover:text-white">Agency</a></li>
+                <li><a href="page2.html" class="hover:text-white">Company</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-1 flex flex-col gap-8 md:col-span-2 md:flex-row">
+              <div class="flex-1">
+                <h4 class="mb-4 text-lg font-bold">Contact</h4>
+                <form class="space-y-3">
+                  <input type="text" placeholder="Name" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="text" placeholder="Company" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <textarea placeholder="Message" rows="2" class="w-full resize-none rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                  <button type="button" class="rounded px-6 py-2 text-sm font-bold text-gray-900 transition-colors hover:bg-green-500" style="background: var(--cta-green)">
+                    Submit
+                  </button>
+                </form>
+              </div>
+
+              <div class="mt-8 flex flex-1 flex-col items-start justify-center border-t border-white/10 pt-8 text-left md:mt-0 md:items-end md:border-none md:pt-0 md:text-right">
+                <h4 class="mb-2 text-lg font-bold">OWN A BILLBOARD?</h4>
+                <p class="mb-4 text-sm text-gray-300">Join our network.</p>
+                <button class="rounded px-6 py-2 text-sm font-bold text-gray-900 transition-colors hover:bg-green-500" style="background: var(--cta-green)">
+                  Partner Registration
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-between border-t border-white/10 pt-6 text-center text-xs text-gray-500 md:flex-row md:text-left">
+            <p>&copy; 2026 AdHub Marketplace. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">info@adhubmarketplace.com</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden");
+        menuCloseIcon.classList.toggle("hidden");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

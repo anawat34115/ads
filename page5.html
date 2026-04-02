@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad Hub Marketplace - Insights & Blog</title>
+    <meta
+      name="description"
+      content="บทความและความรู้ด้าน billboard, OOH media, digital LED, transit advertising, media planning และ consumer insights สำหรับแบรนด์และนักการตลาดในประเทศไทย"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --nav-bg: rgba(28, 35, 49, 0.8);
+        --footer-navy: #1a1a3a;
+        --cta-green: #00e676;
+        --brand-purple: #5800ff;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-display {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+
+      button,
+      .button-text,
+      nav a {
+        font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
+    <div class="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
+      <nav class="absolute left-0 top-6 z-50 w-full">
+        <div class="mx-auto max-w-6xl px-4">
+          <div
+            class="flex items-center justify-between rounded-full border border-white/10 px-6 py-3 shadow-2xl backdrop-blur-md"
+            style="background: var(--nav-bg)"
+          >
+            <a href="index.html" class="flex cursor-pointer items-center gap-2">
+              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0L40 40H0L20 0Z" fill="url(#paint0_linear)" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3B82F6"></stop>
+                    <stop offset="0.5" stop-color="#8B5CF6"></stop>
+                    <stop offset="1" stop-color="#10B981"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-lg font-bold leading-tight text-white">Ad Hub</span>
+                <span class="text-[10px] leading-tight tracking-[0.2em] text-gray-300">Marketplace</span>
+              </div>
+            </a>
+
+            <div class="hidden items-center space-x-8 text-sm text-gray-200 md:flex">
+              <a href="index.html" class="transition hover:text-white">Home</a>
+              <a href="page2.html" class="transition hover:text-white">About Us</a>
+              <a href="page3.html" class="transition hover:text-white">Portfolio</a>
+              <a href="page4.html" class="transition hover:text-white">Partner with Us</a>
+              <a href="page5.html" class="font-bold text-white transition">Blog</a>
+              <a href="page6.html" class="transition hover:text-white">Contact Us</a>
+            </div>
+
+            <div class="hidden md:block">
+              <button class="rounded-full border border-blue-500 px-6 py-2 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500 hover:text-white">
+                Partner Login
+              </button>
+            </div>
+
+            <button id="menuButton" class="text-white md:hidden" type="button" aria-label="Toggle menu">
+              <span id="menuOpenIcon">&#9776;</span>
+              <span id="menuCloseIcon" class="hidden">&#10005;</span>
+            </button>
+          </div>
+
+          <div id="mobileMenu" class="mt-4 hidden rounded-3xl bg-slate-900/95 px-6 py-5 text-sm text-white shadow-xl md:hidden">
+            <div class="flex flex-col gap-4">
+              <a href="index.html" class="border-b border-white/10 pb-3">Home</a>
+              <a href="page2.html" class="border-b border-white/10 pb-3">About Us</a>
+              <a href="page3.html" class="border-b border-white/10 pb-3">Portfolio</a>
+              <a href="page4.html" class="border-b border-white/10 pb-3">Partner with Us</a>
+              <a href="page5.html" class="border-b border-white/10 pb-3 font-bold text-white">Blog</a>
+              <a href="page6.html" class="border-b border-white/10 pb-3">Contact Us</a>
+              <button class="mt-2 rounded-full border border-blue-500 px-6 py-2 text-left text-blue-400">Partner Login</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section id="about" class="relative bg-[#0b1329] px-4 pb-20 pt-40 text-white">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#0b1329] via-blue-900/40 to-purple-900/40"></div>
+          <div class="absolute right-20 top-20 h-64 w-64 rounded-full bg-purple-500/20 blur-[80px]"></div>
+          <div class="absolute bottom-10 left-20 h-80 w-80 rounded-full bg-blue-500/20 blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-6xl text-center">
+          <h1 class="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl">
+            Insights &amp; <span class="bg-gradient-to-r from-purple-400 to-emerald-400 bg-clip-text text-transparent">Knowledge</span>
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-xl font-light leading-relaxed text-gray-300">
+            อัปเดตเทรนด์ บทความความรู้ และข่าวสารล่าสุดในวงการสื่อโฆษณานอกบ้าน เพื่อต่อยอดความสำเร็จให้ธุรกิจคุณ
+          </p>
+
+          <div class="relative mx-auto max-w-2xl">
+            <input
+              type="text"
+              placeholder="ค้นหาบทความ, เทรนด์, หรือคำแนะนำ..."
+              class="w-full rounded-full border border-white/20 bg-white/10 py-4 pl-14 pr-32 text-white placeholder-gray-400 backdrop-blur-md focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">⌕</span>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-[#5800FF] px-6 py-2 font-semibold text-white transition-colors hover:bg-purple-600">
+              ค้นหา
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative z-20 -mt-8 border-b border-gray-100 bg-white py-12">
+        <div class="mx-auto max-w-6xl px-4">
+          <article class="group flex cursor-pointer flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] lg:flex-row">
+            <div class="relative h-64 overflow-hidden bg-gray-200 lg:h-auto lg:w-3/5">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                alt="5 เทรนด์สื่อโฆษณานอกบ้าน (OOH) ที่น่าจับตามอง"
+                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div class="absolute left-4 top-4 flex items-center gap-1 rounded-md bg-emerald-500 px-3 py-1.5 text-xs font-bold text-white shadow-sm">
+                <span>🏷</span> FEATURED
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center p-8 lg:w-2/5 lg:p-12">
+              <div class="mb-4 flex items-center gap-4 text-sm font-medium text-gray-500">
+                <span class="font-bold text-[#5800FF]">OOH Trends</span>
+                <span class="flex items-center"><span class="mr-1">🗓</span>12 March 2024</span>
+              </div>
+
+              <h2 class="mb-4 text-2xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF] lg:text-3xl">
+                5 เทรนด์สื่อโฆษณานอกบ้าน (OOH) ที่น่าจับตามอง
+              </h2>
+
+              <p class="mb-8 leading-relaxed text-gray-600">
+                สำรวจแนวโน้มและเทคโนโลยีใหม่ๆ ที่จะเข้ามาพลิกโฉมวงการป้ายโฆษณา ตั้งแต่ 3D LED ไปจนถึงการใช้ AI ในการวิเคราะห์ผู้ชม ให้แบรนด์ของคุณล้ำหน้าคู่แข่ง
+              </p>
+
+              <div class="mt-auto flex items-center justify-between">
+                <span class="flex items-center text-sm text-gray-500"><span class="mr-1">🕒</span>5 min read</span>
+                <span class="inline-flex items-center font-bold text-[#5800FF] transition-transform group-hover:translate-x-2">
+                  Read Article <span class="ml-1">→</span>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="bg-gray-50 py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <h3 class="mb-10 flex items-center justify-between text-2xl font-bold text-gray-900">
+            Latest Articles
+            <span class="cursor-pointer text-sm font-semibold text-[#5800FF] hover:underline">View All Posts</span>
+          </h3>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Marketing Tech" class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                <div class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1.5 text-xs font-bold text-[#5800FF] shadow-sm backdrop-blur">Marketing Tech</div>
+              </div>
+              <div class="flex flex-grow flex-col p-6">
+                <h4 class="mb-3 line-clamp-2 text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF]">วิธีวัดผล ROI จากป้ายบิลบอร์ดให้แม่นยำด้วย Data Analytics</h4>
+                <p class="mb-6 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600">เจาะลึกวิธีนำข้อมูลเชิงสถิติ (Data) มาใช้วัดผลความคุ้มค่าของการลงโฆษณาบิลบอร์ดแบบไม่ต้องเดาอีกต่อไป</p>
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                  <span class="flex items-center"><span class="mr-1">🗓</span>08 March 2024</span>
+                  <span class="flex items-center"><span class="mr-1">🕒</span>4 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Consumer Insights" class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                <div class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1.5 text-xs font-bold text-[#5800FF] shadow-sm backdrop-blur">Consumer Insights</div>
+              </div>
+              <div class="flex flex-grow flex-col p-6">
+                <h4 class="mb-3 line-clamp-2 text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF]">เจาะลึกพฤติกรรมผู้บริโภค ทำไม Transit Media ถึงตอบโจทย์?</h4>
+                <p class="mb-6 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600">วิเคราะห์เส้นทางการเดินทางของคนกรุงเทพฯ และเหตุผลที่โฆษณาบนรถไฟฟ้าและขนส่งมวลชนถึงสร้างยอดขายได้จริง</p>
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                  <span class="flex items-center"><span class="mr-1">🗓</span>05 March 2024</span>
+                  <span class="flex items-center"><span class="mr-1">🕒</span>6 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="OOH Trends" class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                <div class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1.5 text-xs font-bold text-[#5800FF] shadow-sm backdrop-blur">OOH Trends</div>
+              </div>
+              <div class="flex flex-grow flex-col p-6">
+                <h4 class="mb-3 line-clamp-2 text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF]">Programmatic DOOH คืออะไร? อนาคตของป้ายโฆษณาดิจิทัล</h4>
+                <p class="mb-6 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600">ทำความรู้จักกับระบบซื้อขายป้ายโฆษณาดิจิทัลอัตโนมัติ ที่จะช่วยให้คุณเปลี่ยนแคมเปญตามสภาพอากาศหรือเวลาได้อย่างเรียลไทม์</p>
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                  <span class="flex items-center"><span class="mr-1">🗓</span>28 February 2024</span>
+                  <span class="flex items-center"><span class="mr-1">🕒</span>5 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800&auto=format&fit=crop" alt="Creative Design" class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                <div class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1.5 text-xs font-bold text-[#5800FF] shadow-sm backdrop-blur">Creative Design</div>
+              </div>
+              <div class="flex flex-grow flex-col p-6">
+                <h4 class="mb-3 line-clamp-2 text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF]">เทคนิคออกแบบป้ายโฆษณาให้ดึงดูดสายตาภายใน 3 วินาที</h4>
+                <p class="mb-6 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600">แชร์เคล็ดลับการจัดวาง Layout การเลือกสี และข้อความ (Copywriting) ให้คนจดจำแบรนด์คุณได้ทันทีที่ขับรถผ่าน</p>
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                  <span class="flex items-center"><span class="mr-1">🗓</span>22 February 2024</span>
+                  <span class="flex items-center"><span class="mr-1">🕒</span>3 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=800&auto=format&fit=crop" alt="Business Tips" class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                <div class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1.5 text-xs font-bold text-[#5800FF] shadow-sm backdrop-blur">Business Tips</div>
+              </div>
+              <div class="flex flex-grow flex-col p-6">
+                <h4 class="mb-3 line-clamp-2 text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-[#5800FF]">SME ก็ลงโฆษณาบิลบอร์ดได้! แนะนำทำเลคุ้มค่าสำหรับธุรกิจขนาดเล็ก</h4>
+                <p class="mb-6 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600">ลบภาพจำว่าบิลบอร์ดต้องแพงเสมอไป เราคัดทำเลคุณภาพในราคาที่เอื้อมถึง เพื่อช่วยให้ SME สร้างการรับรู้ได้ในวงกว้าง</p>
+                <div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                  <span class="flex items-center"><span class="mr-1">🗓</span>15 February 2024</span>
+                  <span class="flex items-center"><span class="mr-1">🕒</span>4 min read</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-16 text-center">
+            <button class="rounded-xl border-2 border-gray-200 bg-white px-8 py-3 font-bold text-gray-700 shadow-sm transition-colors hover:border-[#5800FF] hover:text-[#5800FF]">
+              Load More Articles
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-24">
+        <div class="mx-auto max-w-4xl px-4">
+          <div class="relative overflow-hidden rounded-3xl border border-[#5800FF]/30 bg-gradient-to-br from-blue-900 via-[#1c2331] to-purple-900 p-10 text-center shadow-2xl md:p-16">
+            <div class="absolute right-0 top-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/20 blur-[80px]"></div>
+            <div class="absolute bottom-0 left-0 h-64 w-64 -translate-x-1/2 translate-y-1/2 rounded-full bg-[#5800FF]/30 blur-[80px]"></div>
+
+            <div class="relative z-10">
+              <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">ไม่พลาดทุกเทรนด์โฆษณานอกบ้าน</h2>
+              <p class="mx-auto mb-8 max-w-2xl text-lg text-blue-200">
+                สมัครรับข่าวสาร Insights บทความวิเคราะห์ตลาด และข้อเสนอสุดพิเศษส่งตรงถึงอีเมลของคุณก่อนใคร
+              </p>
+
+              <form class="mx-auto flex max-w-xl flex-col gap-3 sm:flex-row">
+                <input
+                  type="email"
+                  placeholder="กรอกอีเมลของคุณที่นี่..."
+                  class="flex-grow rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-white placeholder-blue-200 backdrop-blur-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400"
+                  required
+                />
+                <button type="submit" class="whitespace-nowrap rounded-xl bg-[#00E676] px-8 py-4 font-bold text-gray-900 shadow-lg shadow-emerald-500/20 transition-colors hover:bg-[#00C853]">
+                  Subscribe
+                </button>
+              </form>
+              <p class="mt-4 text-xs text-blue-300">ไม่มีสแปม เราเคารพความเป็นส่วนตัวของคุณ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" class="bg-gray-50 py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 text-center">
+            <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">Topic Clusters</p>
+            <h2 class="mb-4 text-3xl font-bold text-gray-900">เนื้อหาที่ช่วยให้แบรนด์วางแผนสื่อได้ดีขึ้น</h2>
+            <p class="mx-auto max-w-3xl text-lg text-gray-600">
+              เราสร้าง content ที่ตอบคำถามทั้งฝั่งเจ้าของแบรนด์ นักการตลาด และเอเจนซี่ ตั้งแต่กลยุทธ์ OOH ไปจนถึงแนวโน้มสื่อดิจิทัลในโลกจริง
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">OOH Strategy</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                บทความเกี่ยวกับการเลือกทำเล billboard, media mix, campaign timing และวิธีใช้สื่อนอกบ้านให้สอดคล้องกับ marketing funnel
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Data & Measurement</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                รวมแนวคิดด้าน ROI, traffic insights, audience behavior และการประเมินประสิทธิภาพของแคมเปญโฆษณานอกบ้าน
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h3 class="mb-3 text-xl font-bold text-gray-900">Creative & Trends</h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                อัปเดตเทรนด์ digital LED, programmatic DOOH, creative best practices และตัวอย่างการออกแบบสื่อที่ดึงดูดสายตาผู้คนได้จริง
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer id="resources" class="pt-16 pb-8 text-white" style="background: var(--footer-navy)">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Site</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li><a href="page2.html" class="hover:text-white">About Us</a></li>
+                <li><a href="page3.html" class="hover:text-white">Portfolio</a></li>
+                <li><a href="page4.html" class="hover:text-white">Partner with Us</a></li>
+                <li><a href="page5.html" class="hover:text-white">Blog</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+
+              <h4 class="mb-4 mt-8 text-lg font-bold">Follow Us</h4>
+              <div class="flex gap-3">
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">f</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">t</div>
+                <div class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">in</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="mb-4 text-lg font-bold">Company</h4>
+              <ul class="space-y-2 text-sm text-gray-300">
+                <li><a href="page4.html" class="hover:text-white">Agency</a></li>
+                <li><a href="page2.html" class="hover:text-white">Company</a></li>
+                <li><a href="page6.html" class="hover:text-white">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-span-1 flex flex-col gap-8 md:col-span-2 md:flex-row">
+              <div class="flex-1">
+                <h4 class="mb-4 text-lg font-bold">Contact</h4>
+                <form class="space-y-3">
+                  <input type="text" placeholder="Name" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="text" placeholder="Company" class="w-full rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500" />
+                  <textarea placeholder="Message" rows="2" class="w-full resize-none rounded border-none bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                  <button type="button" class="rounded px-6 py-2 text-sm font-bold text-gray-900 transition-colors hover:bg-green-500" style="background: var(--cta-green)">
+                    Submit
+                  </button>
+                </form>
+              </div>
+
+              <div class="mt-8 flex flex-1 flex-col items-start justify-center border-t border-white/10 pt-8 text-left md:mt-0 md:items-end md:border-none md:pt-0 md:text-right">
+                <h4 class="mb-2 text-lg font-bold text-[#00E676]">JOIN AS PARTNER</h4>
+                <p class="mb-4 text-sm text-gray-300">Grow your OOH business.</p>
+                <button class="rounded border border-white/30 bg-transparent px-6 py-2 text-sm font-bold text-white transition-colors hover:border-white">
+                  Partner Registration
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-between border-t border-white/10 pt-6 text-center text-xs text-gray-500 md:flex-row md:text-left">
+            <p>&copy; 2026 AdHub Marketplace. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">info@adhubmarketplace.com</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOpenIcon = document.getElementById("menuOpenIcon");
+      const menuCloseIcon = document.getElementById("menuCloseIcon");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden");
+        menuCloseIcon.classList.toggle("hidden");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuOpenIcon.classList.remove("hidden");
+          menuCloseIcon.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
