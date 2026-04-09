@@ -67,38 +67,17 @@
         height: 48px;
       }
 
-      .brand-mark {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 9999px;
-        background: linear-gradient(135deg, #22c55e 0%, #0ea5e9 55%, #1d4ed8 100%);
-        color: #ffffff;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-      }
-
       .sticky-cta {
         position: fixed;
         right: 1rem;
         bottom: 1rem;
         z-index: 60;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
       }
 
-      .sticky-cta a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 10rem;
-        border-radius: 9999px;
-        padding: 0.9rem 1.25rem;
-        font-weight: 700;
+      .sticky-cta img {
+        display: block;
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.2);
+        border-radius: 9999px;
       }
 
       .login-modal-backdrop {
@@ -120,8 +99,9 @@
           bottom: 1rem;
         }
 
-        .sticky-cta a {
-          width: 100%;
+        .sticky-cta img {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     </style>
@@ -145,12 +125,8 @@
               class="flex items-center justify-between rounded-full border border-white/10 px-6 py-3 shadow-2xl backdrop-blur-md"
               style="background: var(--nav-bg)"
             >
-              <a href="index.html" class="flex cursor-pointer items-center gap-3">
-                <span class="brand-mark">A</span>
-                <div class="flex flex-col">
-                  <span class="text-lg font-bold uppercase leading-tight tracking-[0.18em] text-white">ADHUB</span>
-                  <span class="text-[10px] leading-tight tracking-[0.2em] text-gray-300">OOH MARKETPLACE MOCKUP</span>
-                </div>
+              <a href="index.html" class="flex cursor-pointer items-center">
+                <img src="img/logo.png" alt="Adhub logo" class="h-12 w-auto md:h-14" />
               </a>
 
               <div class="hidden items-center space-x-8 text-sm text-gray-200 md:flex">
@@ -566,8 +542,9 @@
     </div>
 
     <div class="sticky-cta">
-      <a href="https://line.me/R/ti/p/@adhub" target="_blank" rel="noreferrer" class="bg-[#00E676] text-gray-900">Add Line</a>
-      <a href="https://line.me/R/ti/p/@adhub" target="_blank" rel="noreferrer" class="bg-[#0b1329] text-white">Chat Line</a>
+      <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer">
+        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0" />
+      </a>
     </div>
 
     <script>
