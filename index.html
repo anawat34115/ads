@@ -67,6 +67,20 @@
         height: 48px;
       }
 
+      .hero-carousel-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+
+      .hero-carousel-image.is-active {
+        opacity: 1;
+      }
+
       .sticky-cta {
         position: fixed;
         right: 1rem;
@@ -110,11 +124,11 @@
     <div class="min-h-screen bg-white text-gray-800">
       <section class="relative flex min-h-[85vh] flex-col items-center justify-center px-4 pb-32 pt-28">
         <div class="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?q=80&w=2574&auto=format&fit=crop"
-            alt="Bangkok Cityscape"
-            class="h-full w-full object-cover"
-          />
+          <img src="banner home/1.jpg" alt="Adhub home banner 1" class="hero-carousel-image is-active" />
+          <img src="banner home/2.jpg" alt="Adhub home banner 2" class="hero-carousel-image" />
+          <img src="banner home/3.jpg" alt="Adhub home banner 3" class="hero-carousel-image" />
+          <img src="banner home/4.jpg" alt="Adhub home banner 4" class="hero-carousel-image" />
+          <img src="banner home/5.jpg" alt="Adhub home banner 5" class="hero-carousel-image" />
           <div class="absolute inset-0" style="background: var(--hero-overlay)"></div>
           <div class="absolute bottom-0 h-32 w-full bg-gradient-to-t from-white to-transparent"></div>
         </div>
@@ -552,10 +566,12 @@
       const mobileMenu = document.getElementById("mobileMenu");
       const menuOpenIcon = document.getElementById("menuOpenIcon");
       const menuCloseIcon = document.getElementById("menuCloseIcon");
+      const heroCarouselImages = document.querySelectorAll(".hero-carousel-image");
       const partnerLoginButton = document.getElementById("partnerLoginButton");
       const mobilePartnerLoginButton = document.getElementById("mobilePartnerLoginButton");
       const partnerLoginModal = document.getElementById("partnerLoginModal");
       const closePartnerLoginModal = document.getElementById("closePartnerLoginModal");
+      let activeHeroSlide = 0;
 
       menuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
@@ -593,6 +609,14 @@
           closePartnerLogin();
         }
       });
+
+      if (heroCarouselImages.length > 1) {
+        setInterval(() => {
+          heroCarouselImages[activeHeroSlide].classList.remove("is-active");
+          activeHeroSlide = (activeHeroSlide + 1) % heroCarouselImages.length;
+          heroCarouselImages[activeHeroSlide].classList.add("is-active");
+        }, 3500);
+      }
     </script>
   </body>
 </html>
