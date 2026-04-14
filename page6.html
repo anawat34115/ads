@@ -115,22 +115,9 @@
           class="flex items-center justify-between rounded-full border border-white/10 px-6 py-3 shadow-2xl backdrop-blur-md"
           style="background: var(--nav-bg)"
         >
-          <a href="index.html" class="flex cursor-pointer items-center gap-2">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 0L40 40H0L20 0Z" fill="url(#paint0_linear)" />
-              <defs>
-                <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#3B82F6"></stop>
-                  <stop offset="0.5" stop-color="#8B5CF6"></stop>
-                  <stop offset="1" stop-color="#10B981"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <div class="flex flex-col">
-              <span class="text-lg font-bold leading-tight text-white">Ad Hub</span>
-              <span class="text-[10px] leading-tight tracking-[0.2em] text-gray-300">Marketplace</span>
-            </div>
-          </a>
+          <a href="index.html" class="flex cursor-pointer items-center">
+              <img src="img/logo.png" alt="Adhub logo" class="h-12 w-auto md:h-14" />
+            </a>
 
           <div class="hidden items-center space-x-8 text-sm text-gray-200 md:flex">
             <a href="index.html" class="transition hover:text-white">Home</a>
@@ -196,21 +183,30 @@
                 <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#00C300] bg-[#00C300]/10 text-[#00C300] shadow-sm shadow-green-500/20 transition-colors group-hover:bg-[#00C300] group-hover:text-white">
                   <span>Line</span>
                 </div>
-                <span class="text-lg font-bold text-gray-800">@adhub_media</span>
+                <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer" class="text-lg font-bold text-gray-800 hover:text-[#00C300]">https://lin.ee/uL7rmU2a</a>
+              </div>
+
+              <div class="group flex items-start gap-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-200 text-gray-500 transition-colors group-hover:border-blue-500 group-hover:text-blue-600">
+                  <span>Map</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=adhubmarketplace%2C+Kanchanaphisek+Rd%2C+Khwaeng+Lak+Song%2C+Bang+Khae%2C+Bangkok+10160" target="_blank" rel="noreferrer" class="text-base font-semibold leading-relaxed text-gray-800 hover:text-blue-600">
+                  adhubmarketplace, Kanchanaphisek Rd, Khwaeng Lak Song, Bang Khae, Bangkok 10160
+                </a>
               </div>
             </div>
 
             <div class="relative w-full max-w-sm overflow-hidden rounded-2xl border-4 border-white bg-gray-100 shadow-2xl transition-transform duration-300 hover:-translate-y-2">
               <img
                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop"
-                alt="Bangkok Map Pin"
+                alt="Adhubmarketplace map location"
                 class="h-48 w-full object-cover opacity-60"
               />
               <div class="absolute inset-0 bg-blue-50/20 mix-blend-overlay"></div>
 
               <div class="absolute left-3 top-3 rounded-lg border border-gray-100 bg-white/95 px-4 py-2 shadow-md backdrop-blur-sm">
-                <div class="text-sm font-bold text-gray-900">Central Bangkok</div>
-                <div class="cursor-pointer text-[10px] font-semibold text-blue-600">View on map</div>
+                <div class="text-sm font-bold text-gray-900">Adhubmarketplace Office</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=adhubmarketplace%2C+Kanchanaphisek+Rd%2C+Khwaeng+Lak+Song%2C+Bang+Khae%2C+Bangkok+10160" target="_blank" rel="noreferrer" class="text-[10px] font-semibold text-blue-600 hover:underline">View on map</a>
               </div>
 
               <div class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
@@ -452,3 +448,7 @@
     </script>
   </body>
 </html>
+
+
+
+
