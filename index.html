@@ -106,6 +106,109 @@
         width: min(92vw, 460px);
       }
 
+      .availability-slide-shell {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2.5rem;
+        background:
+          radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32%),
+          linear-gradient(135deg, #06111f 0%, #102446 55%, #1f4f87 100%);
+        box-shadow: 0 30px 80px rgba(15, 23, 42, 0.16);
+      }
+
+      .availability-slide-shell::before {
+        content: "";
+        position: absolute;
+        inset: auto -12% -28% auto;
+        width: 22rem;
+        height: 22rem;
+        border-radius: 9999px;
+        background: rgba(34, 211, 238, 0.12);
+        filter: blur(10px);
+      }
+
+      .availability-stage {
+        position: relative;
+        min-height: 720px;
+      }
+
+      .availability-panel {
+        position: relative;
+        z-index: 1;
+        max-width: 28rem;
+      }
+
+      .availability-card {
+        position: relative;
+        width: min(100%, 480px);
+        aspect-ratio: 1654 / 2338;
+        margin-inline: auto;
+        border-radius: 2.25rem;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1rem;
+        box-shadow: 0 35px 90px rgba(2, 6, 23, 0.32);
+        backdrop-filter: blur(14px);
+      }
+
+      .availability-card::before,
+      .availability-card::after {
+        content: "";
+        position: absolute;
+        inset: 1.5rem auto 1.5rem auto;
+        width: 82%;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.08);
+        z-index: -1;
+        filter: blur(1px);
+      }
+
+      .availability-card::before {
+        left: -10%;
+        transform: scale(0.93);
+        opacity: 0.5;
+      }
+
+      .availability-card::after {
+        right: -10%;
+        transform: scale(0.93);
+        opacity: 0.3;
+      }
+
+      .availability-card img {
+        position: absolute;
+        inset: 1rem;
+        width: 100%;
+        aspect-ratio: 1654 / 2338;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        object-fit: contain;
+        border-radius: 1.75rem;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(15, 23, 42, 0.32));
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
+
+      .availability-card img.is-active {
+        opacity: 1;
+      }
+      .availability-dots {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .availability-dots span {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      .availability-dots span.is-active {
+        width: 2.2rem;
+        background: #00e676;
+      }
+
       @media (max-width: 767px) {
         .sticky-cta {
           left: 1rem;
@@ -116,6 +219,19 @@
         .sticky-cta img {
           margin-left: auto;
           margin-right: auto;
+        }
+
+        .availability-stage {
+          min-height: unset;
+        }
+
+        .availability-card {
+          width: 100%;
+        }
+
+        .availability-card::before,
+        .availability-card::after {
+          display: none;
         }
       }
     </style>
@@ -180,7 +296,7 @@
 
         <div class="relative z-10 mx-auto mt-12 max-w-5xl text-center">
           <h1 class="mb-6 text-4xl font-bold uppercase leading-tight tracking-wide text-white md:text-5xl lg:text-6xl">
-            YOUR GATEWAY TO EFFECTIVE OUT-OF-HOME ADVERTISING
+            OUR GATEWAY TO EFFECTIVE OUT-OF-HOME ADVERTISING
           </h1>
           <p class="mx-auto mb-10 max-w-3xl text-lg font-light text-gray-200 md:text-xl">
             Explore a homepage mockup that shows where each service goes next, how partner login could work, and how users can always reach your team through sticky Line CTA.
@@ -188,7 +304,7 @@
 
           <div class="flex flex-col justify-center gap-6 sm:flex-row">
             <a href="#services" class="flex min-w-[280px] flex-col items-center justify-center rounded-xl border-2 border-cyan-400 bg-[#0b1329]/80 px-8 py-4 font-bold text-white backdrop-blur transition-all hover:bg-[#0b1329]">
-              <span class="text-sm tracking-wider">FIND BILLBOARDS ON MAP</span>
+              <span class="text-sm tracking-wider">ส่งข้อมูลเพื่อขอรับคำปรึกษาฟรี</span>
               <span class="mt-1 text-xs font-normal text-gray-400">service mockup flow</span>
             </a>
 
@@ -268,6 +384,60 @@
               </p>
               <a href="page5.html" class="text-sm font-bold text-blue-700 hover:underline">Open Service Mockup</a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 py-8 md:py-14">
+        <div class="mx-auto max-w-6xl">
+          <div class="availability-slide-shell px-6 py-8 md:px-10 md:py-12">
+            <div class="availability-stage grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+              <div class="availability-panel">
+                <p class="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                  Billboard Ready To Use
+                </p>
+                <h2 class="max-w-lg text-3xl font-bold leading-tight text-white md:text-5xl">
+                  ป้ายว่างพร้อมใช้
+                  <span class="block text-cyan-300">เลือกดูภาพ แล้วกดติดต่อเราได้ทันที</span>
+                </h2>
+                <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
+                  เพิ่ม section แบบภาพ slide บนหน้าแรก เพื่อให้ลูกค้าโฟกัสป้ายทีละตำแหน่ง เห็นรูปจริงก่อน แล้วค่อยกดไปคุยกับทีมขายหรือเปิดดู inventory เพิ่มต่อได้เลย
+                </p>
+
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+                  <a href="page6.html" class="rounded-full px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-green-300" style="background: var(--cta-green)">
+                    ติดต่อเรา
+                  </a>
+                  <a href="page3.html" class="rounded-full border border-white/25 px-7 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+                    ดูป้ายทั้งหมด
+                  </a>
+                </div>
+
+                <div class="mt-8 flex items-center justify-between gap-6 border-t border-white/10 pt-6">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200">Slide Preview</p>
+                    <p class="mt-2 text-sm text-slate-200">ขนาดภาพอ้างอิง 1,654 x 2,338 สำหรับ mockup ป้ายแนวตั้ง</p>
+                  </div>
+                  <div id="availabilityDots" class="availability-dots" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="availability-card" id="availabilityCard">
+                  <img src="ใบขายป้าย/KB1645A-adhub ถ.กาญจนาภิเษก - ติดคลองภาษีเจริญ ฝั่งคอนโดวิเศษสุขนคร (มุ่งพระราม 2)_.jpg" alt="Billboard ready to use preview 1" class="is-active availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB1912-adhub-กรุงเทพฯ---ถ.สุขุมวิท-ทางลงสะพานพระโขนง-ซ.สุขุมวิท-75.jpg" alt="Billboard ready to use preview 2" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB2006A-adhub-ถ.เพชรเกษม---ตรงข้ามเดอะมอลล์บางแค-(แยกหลักสอง)-จุดที่-1.jpg" alt="Billboard ready to use preview 3" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB3911-adhub-ถ.พระราม-9---แยก-อ.ส.ม.ท.jpg" alt="Billboard ready to use preview 4" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB4151-adhub-กรุงเทพฯ-บางบอน-สามแยกถนนมนธาตุราชศรีพิจิตร.jpg" alt="Billboard ready to use preview 5" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB4153-adhub-ถนนเอกชัย-ช่วงบางบอน-5---ใกล้ซอยเอกชัย-126.jpg" alt="Billboard ready to use preview 6" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB4161-adhub-ถนนเอกชัย---แยกบางบอน-5-จุดที่-1.jpg" alt="Billboard ready to use preview 7" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB4162-adhub-ถนนบางบอน-5-ซอย-7-มุ่งหน้าถนนเอกชัย.jpg" alt="Billboard ready to use preview 8" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KB709A-adhub-ทางพิเศษสาย-S1---แยกอาจณรงค์-ซอยรัตนาพราหมณ์-(มุ่งไบเทค).jpg" alt="Billboard ready to use preview 9" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KC704A-adhub-นนทบุรี-ทางพิเศษศรีรัช-ทางลงแจ้งวัฒนะ-(มุ่งเมืองทองธานี).jpg" alt="Billboard ready to use preview 10" class="availability-carousel-image" />
+                  <img src="ใบขายป้าย/KE060A-adhub-ชลบุรี-มอเตอร์เวย์-กม.78-ด่านบางพระ-3-(มุ่.jpg" alt="Billboard ready to use preview 11" class="availability-carousel-image" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -585,7 +755,10 @@
       const mobilePartnerLoginButton = document.getElementById("mobilePartnerLoginButton");
       const partnerLoginModal = document.getElementById("partnerLoginModal");
       const closePartnerLoginModal = document.getElementById("closePartnerLoginModal");
+      const availabilityCarouselImages = document.querySelectorAll(".availability-carousel-image");
+      const availabilityDots = document.getElementById("availabilityDots");
       let activeHeroSlide = 0;
+      let activeAvailabilitySlide = 0;
 
       menuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
@@ -630,6 +803,31 @@
           activeHeroSlide = (activeHeroSlide + 1) % heroCarouselImages.length;
           heroCarouselImages[activeHeroSlide].classList.add("is-active");
         }, 3500);
+      }
+
+      if (availabilityCarouselImages.length > 0 && availabilityDots) {
+        availabilityCarouselImages.forEach((_, index) => {
+          const dot = document.createElement("span");
+          if (index === 0) {
+            dot.classList.add("is-active");
+          }
+          availabilityDots.appendChild(dot);
+        });
+
+        const updateAvailabilitySlide = () => {
+          const dots = availabilityDots.querySelectorAll("span");
+          availabilityCarouselImages.forEach((image, index) => {
+            image.classList.toggle("is-active", index === activeAvailabilitySlide);
+          });
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("is-active", index === activeAvailabilitySlide);
+          });
+        };
+
+        setInterval(() => {
+          activeAvailabilitySlide = (activeAvailabilitySlide + 1) % availabilityCarouselImages.length;
+          updateAvailabilitySlide();
+        }, 3200);
       }
     </script>
   </body>
