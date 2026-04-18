@@ -54,6 +54,27 @@
       .pin-float {
         animation: float-pin 1.8s ease-in-out infinite;
       }
+
+      .consent-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        border: 1px solid #e5e7eb;
+        background: rgba(255, 255, 255, 0.72);
+        padding: 0.9rem 1rem;
+      }
+
+      .consent-check input {
+        margin-top: 0.2rem;
+      }
+
+      .auto-reply-card {
+        border-radius: 1.5rem;
+        border: 1px solid rgba(88, 0, 255, 0.14);
+        background: linear-gradient(180deg, rgba(88, 0, 255, 0.05) 0%, rgba(28, 35, 49, 0.03) 100%);
+        padding: 1.2rem 1.25rem;
+      }
     </style>
   </head>
   <body class="relative min-h-screen overflow-x-hidden bg-[#F8F9FB] text-gray-800">
@@ -169,28 +190,28 @@
                 <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-200 text-gray-500 transition-colors group-hover:border-blue-500 group-hover:text-blue-600">
                   <span>Tel</span>
                 </div>
-                <span class="text-lg font-semibold text-gray-800">+66 91-xxx-xxxx</span>
+                <span class="text-lg font-semibold text-gray-800">095-895-6995</span>
               </div>
 
               <div class="group flex items-center gap-4">
                 <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-200 text-gray-500 transition-colors group-hover:border-blue-500 group-hover:text-blue-600">
                   <span>Mail</span>
                 </div>
-                <span class="text-lg font-semibold text-gray-800">support@billboardthai.com</span>
+                <span class="text-lg font-semibold text-gray-800">contact.adhubmarketplace@gmail.com</span>
               </div>
 
               <div class="group flex items-center gap-4">
                 <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#00C300] bg-[#00C300]/10 text-[#00C300] shadow-sm shadow-green-500/20 transition-colors group-hover:bg-[#00C300] group-hover:text-white">
                   <span>Line</span>
                 </div>
-                <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer" class="text-lg font-bold text-gray-800 hover:text-[#00C300]">https://lin.ee/uL7rmU2a</a>
+                <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer" class="text-lg font-bold text-gray-800 hover:text-[#00C300]">@adhubmedia</a>
               </div>
 
               <div class="group flex items-start gap-4">
                 <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-200 text-gray-500 transition-colors group-hover:border-blue-500 group-hover:text-blue-600">
                   <span>Map</span>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=adhubmarketplace%2C+Kanchanaphisek+Rd%2C+Khwaeng+Lak+Song%2C+Bang+Khae%2C+Bangkok+10160" target="_blank" rel="noreferrer" class="text-base font-semibold leading-relaxed text-gray-800 hover:text-blue-600">
+                <a href="https://maps.app.goo.gl/ycqE2YZaUpBHALor7" target="_blank" rel="noreferrer" class="text-base font-semibold leading-relaxed text-gray-800 hover:text-blue-600">
                   adhubmarketplace, Kanchanaphisek Rd, Khwaeng Lak Song, Bang Khae, Bangkok 10160
                 </a>
               </div>
@@ -199,7 +220,7 @@
             <div class="relative w-full max-w-sm overflow-hidden rounded-2xl border-4 border-white bg-gray-100 shadow-2xl transition-transform duration-300 hover:-translate-y-2">
               <iframe
                 title="Adhubmarketplace Google Map"
-                src="https://www.google.com/maps?q=adhubmarketplace%2C%20Kanchanaphisek%20Rd%2C%20Khwaeng%20Lak%20Song%2C%20Bang%20Khae%2C%20Bangkok%2010160&z=15&output=embed"
+                src="https://www.google.com/maps?q=adhubmarketplace%2C%20Kanchanaphisek%20Rd%2C%20Khwaeng%20Lak%20Song%2C%20Bang%20Khae%2C%20Bangkok%2010160&z=16&output=embed"
                 class="h-64 w-full"
                 style="border: 0"
                 loading="lazy"
@@ -208,7 +229,7 @@
 
               <div class="absolute left-3 top-3 rounded-lg border border-gray-100 bg-white/95 px-4 py-2 shadow-md backdrop-blur-sm">
                 <div class="text-sm font-bold text-gray-900">Adhubmarketplace Office</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=adhubmarketplace%2C+Kanchanaphisek+Rd%2C+Khwaeng+Lak+Song%2C+Bang+Khae%2C+Bangkok+10160" target="_blank" rel="noreferrer" class="text-[10px] font-semibold text-blue-600 hover:underline">View on map</a>
+                <a href="https://maps.app.goo.gl/ycqE2YZaUpBHALor7" target="_blank" rel="noreferrer" class="text-[10px] font-semibold text-blue-600 hover:underline">View on map</a>
               </div>
             </div>
           </div>
@@ -262,6 +283,17 @@
                 <textarea rows="3" class="w-full resize-none rounded-2xl border border-gray-300 bg-transparent px-5 py-3 text-sm outline-none transition-all focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
               </div>
 
+              <div class="space-y-3">
+                <label class="consent-check">
+                  <input type="checkbox" class="h-4 w-4 cursor-pointer rounded border-gray-300 text-[#5800FF] focus:ring-[#5800FF]" />
+                  <span class="text-sm leading-relaxed text-gray-600"> &#xE09;&#xE31;&#xE19;&#xE22;&#xE34;&#xE19;&#xE22;&#xE2D;&#xE21;&#xE43;&#xE2B;&#xE49;&#xE1A;&#xE23;&#xE34;&#xE29;&#xE31;&#xE17;&#xE15;&#xE34;&#xE14;&#xE15;&#xE48;&#xE2D;&#xE01;&#xE25;&#xE31;&#xE1A;&#xE40;&#xE1E;&#xE37;&#xE48;&#xE2D;&#xE40;&#xE2A;&#xE19;&#xE2D;&#xE02;&#xE49;&#xE2D;&#xE21;&#xE39;&#xE25;&#xE2A;&#xE34;&#xE19;&#xE04;&#xE49;&#xE32;&#xE41;&#xE25;&#xE30;&#xE1A;&#xE23;&#xE34;&#xE01;&#xE32;&#xE23;</span>
+                </label>
+                <label class="consent-check">
+                  <input type="checkbox" id="privacy" class="h-4 w-4 cursor-pointer rounded border-gray-300 text-[#5800FF] focus:ring-[#5800FF]" />
+                  <span class="text-sm leading-relaxed text-gray-600"> &#xE09;&#xE31;&#xE19;&#xE22;&#xE2D;&#xE21;&#xE23;&#xE31;&#xE1A; <a href="https://docs.google.com/document/d/1_FllfJf9goJTKwMRAr-flVeMOg4wmuaRVl8Hq-vTJ1c/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#5800FF] underline">Privacy Policy</a> &#xE41;&#xE25;&#xE30;&#xE40;&#xE07;&#xE37;&#xE48;&#xE2D;&#xE19;&#xE44;&#xE02;&#xE01;&#xE32;&#xE23;&#xE43;&#xE0A;&#xE49;&#xE07;&#xE32;&#xE19;</span>
+                </label>
+              </div>
+
               <div class="pt-2">
                 <button
                   type="button"
@@ -277,11 +309,14 @@
                 </button>
               </div>
 
-              <div class="ml-2 mt-4 flex items-center gap-2">
-                <input type="checkbox" id="privacy" class="h-4 w-4 cursor-pointer rounded border-gray-300 text-[#5800FF] focus:ring-[#5800FF]" />
-                <label for="privacy" class="cursor-pointer text-xs text-gray-500">
-                  I agree to the <a href="#" class="text-blue-600 underline hover:text-[#5800FF]">privacy policy</a>
-                </label>
+              <div class="auto-reply-card">
+                <p class="text-xs font-bold uppercase tracking-[0.24em] text-[#5800FF]">Auto Reply Mockup</p>
+                <div class="mt-3 text-sm leading-7 text-gray-700">
+                  <p>&#xE02;&#xE2D;&#xE1A;&#xE04;&#xE38;&#xE13;&#xE17;&#xE35;&#xE48;&#xE2A;&#xE19;&#xE43;&#xE08;&#xE25;&#xE07;&#xE42;&#xE06;&#xE29;&#xE13;&#xE32;&#xE01;&#xE31;&#xE1A;&#xE40;&#xE23;&#xE32; &#x1F64C;</p>
+                  <p>&#xE40;&#xE23;&#xE32;&#xE44;&#xE14;&#xE49;&#xE23;&#xE31;&#xE1A;&#xE02;&#xE49;&#xE2D;&#xE21;&#xE39;&#xE25;&#xE02;&#xE2D;&#xE07;&#xE04;&#xE38;&#xE13;&#xE41;&#xE25;&#xE49;&#xE27;</p>
+                  <p>&#xE01;&#xE33;&#xE25;&#xE31;&#xE07;&#xE04;&#xE31;&#xE14;&#xE17;&#xE33;&#xE40;&#xE25;&#xE17;&#xE35;&#xE48;&#xE40;&#xE2B;&#xE21;&#xE32;&#xE30;&#xE01;&#xE31;&#xE1A;&#xE07;&#xE1A;&#xE02;&#xE2D;&#xE07;&#xE04;&#xE38;&#xE13;</p>
+                  <p>&#x1F4CD; &#xE20;&#xE32;&#xE22;&#xE43;&#xE19; 24 &#xE0A;&#xE21;.</p>
+                </div>
               </div>
             </form>
           </div>
@@ -321,8 +356,8 @@
       </div>
     </section>
 
-    <section id="locations" class="bg-[#F8F9FB] py-16">
-      <div class="mx-auto max-w-5xl px-4">
+      <section id="locations" class="bg-[#F8F9FB] py-16">
+        <div class="mx-auto max-w-5xl px-4">
         <div class="mb-12 text-center">
           <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">FAQ</p>
           <h2 class="text-3xl font-bold text-gray-900">คำถามที่ลูกค้ามักถามก่อนเริ่มต้น</h2>
@@ -357,8 +392,28 @@
             </p>
           </article>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <section class="bg-white pb-16">
+        <div class="mx-auto max-w-5xl px-4">
+          <div class="rounded-[2rem] bg-gradient-to-r from-[#5800FF] to-[#1c2331] px-8 py-10 text-white shadow-2xl shadow-purple-500/20 md:px-12">
+            <p class="text-sm font-bold uppercase tracking-[0.28em] text-purple-200">Ready To Start</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight">Ready to Start Your Campaign?</h2>
+            <p class="mt-4 max-w-2xl text-sm leading-relaxed text-purple-100 md:text-base">
+              &#xE2A;&#xE48;&#xE07; brief &#xE21;&#xE32;&#xE44;&#xE14;&#xE49;&#xE40;&#xE25;&#xE22; &#xE41;&#xE25;&#xE49;&#xE27;&#xE17;&#xE35;&#xE21; AdHub &#xE08;&#xE30;&#xE0A;&#xE48;&#xE27;&#xE22;&#xE04;&#xE31;&#xE14;&#xE17;&#xE33;&#xE40;&#xE25;&#xE17;&#xE35;&#xE48;&#xE40;&#xE2B;&#xE21;&#xE32;&#xE30;&#xE01;&#xE31;&#xE1A;&#xE07;&#xE1A; &#xE41;&#xE25;&#xE30;&#xE40;&#xE1B;&#xE49;&#xE32;&#xE2B;&#xE21;&#xE32;&#xE22;&#xE02;&#xE2D;&#xE07;&#xE04;&#xE38;&#xE13;&#xE43;&#xE2B;&#xE49;&#xE20;&#xE32;&#xE22;&#xE43;&#xE19; 24 &#xE0A;&#xE21;.
+            </p>
+            <div class="mt-7 flex flex-col gap-4 sm:flex-row">
+              <a href="#about" class="inline-flex items-center justify-center rounded-full bg-[#00E676] px-7 py-3 text-sm font-bold text-gray-900 transition hover:bg-green-300">
+                &#xE01;&#xE23;&#xE2D;&#xE01; Contact Form
+              </a>
+              <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+                Chat LINE &#64;adhubmedia
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <footer id="resources" class="pt-16 pb-8 text-white" style="background: var(--footer-navy)">
       <div class="mx-auto max-w-6xl px-4">
@@ -432,7 +487,10 @@
 
         <div class="flex flex-col items-center justify-between border-t border-white/10 pt-6 text-center text-xs text-gray-500 md:flex-row md:text-left">
           <p>&copy; 2026 AdHub Marketplace. All rights reserved.</p>
-          <p class="mt-2 md:mt-0">info@adhubmarketplace.com</p>
+          <div class="mt-2 flex flex-col items-center gap-2 md:mt-0 md:flex-row md:gap-4">
+            <a href="https://docs.google.com/document/d/1_FllfJf9goJTKwMRAr-flVeMOg4wmuaRVl8Hq-vTJ1c/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-white">Privacy Policy</a>
+            <p>info@adhubmarketplace.com</p>
+          </div>
         </div>
       </div>
     </footer>

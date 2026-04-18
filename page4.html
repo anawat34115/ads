@@ -41,6 +41,29 @@
       nav a {
         font-family: "IBM Plex Sans Thai", "Noto Sans Thai", Arial, Helvetica, sans-serif;
       }
+
+      @keyframes partner-logo-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .partner-logo-track {
+        animation: partner-logo-scroll 28s linear infinite;
+        display: flex;
+        width: max-content;
+      }
+
+      .partner-logo-track:hover {
+        animation-play-state: paused;
+      }
+
+      .partner-logo-pill {
+        min-width: 180px;
+      }
     </style>
   </head>
   <body class="min-h-screen overflow-x-hidden bg-gray-50 text-gray-800">
@@ -93,8 +116,8 @@
       <section id="about" class="relative bg-[#0b1329] px-4 pb-24 pt-40 text-white">
         <div class="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
-            alt="Business Partnership"
+            src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?q=80&w=2000&auto=format&fit=crop"
+            alt="Billboard Advertising"
             class="h-full w-full object-cover opacity-20"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-[#0b1329] via-[#0b1329]/90 to-[#5800FF]/40"></div>
@@ -106,127 +129,200 @@
               สำหรับเจ้าของสื่อโฆษณา (Media Owners)
             </div>
             <h1 class="mb-6 text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
-              ขยายโอกาสทางธุรกิจ <br />
-              <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">เพิ่มรายได้ให้ป้ายของคุณ</span>
+              มีป้าย แต่ยังมีช่องว่าง <br />
+              <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">ให้เป็นรายได้ทุกเดือน</span>
             </h1>
             <p class="mb-10 max-w-2xl text-xl font-light leading-relaxed text-gray-300">
-              เข้าร่วมเป็นพาร์ทเนอร์กับแพลตฟอร์มรวมสื่อโฆษณานอกบ้านที่เติบโตเร็วที่สุดในไทย ให้เอเจนซี่และแบรนด์ชั้นนำค้นพบทำเลของคุณได้ง่ายขึ้น
+              เจ้าของป้ายกว่า 100+ ราย ใช้ AdHub ช่วยหาลูกค้าให้ ลดเวลาวิ่งหางานเอง และเพิ่มโอกาสให้ป้ายถูกค้นพบจากแบรนด์และเอเจนซี่ได้ง่ายขึ้น
             </p>
             <div class="flex flex-col gap-4 sm:flex-row">
-              <button class="flex items-center justify-center rounded-xl bg-[#00E676] px-8 py-4 font-bold text-gray-900 shadow-lg shadow-[#00E676]/20 transition-all hover:bg-[#00C853]">
-                สมัครเข้าร่วมเครือข่ายฟรี <span class="ml-2">→</span>
-              </button>
-              <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noreferrer" class="flex items-center justify-center rounded-xl border-2 border-white/20 bg-transparent px-8 py-4 font-bold text-white transition-all hover:bg-white/10">
+              <a href="#partner-form" class="flex items-center justify-center rounded-xl bg-[#00E676] px-8 py-4 font-bold text-gray-900 shadow-lg shadow-[#00E676]/20 transition-all hover:bg-[#00C853]">
+                ลงขายป้ายฟรี <span class="ml-2">→</span>
+              </a>
+              <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-xl border-2 border-white/20 bg-transparent px-8 py-4 font-bold text-white transition-all hover:bg-white/10">
                 พูดคุยกับทีมงาน
               </a>
+            </div>
+            <div class="mt-8 flex flex-wrap items-center gap-4 text-sm text-gray-300">
+              <div class="flex items-center gap-2">
+                <span class="text-[#00E676]">✓</span>
+                <span>ลงขายฟรี</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#00E676]">✓</span>
+                <span>หาลูกค้าให้</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#00E676]">✓</span>
+                <span>ทีมช่วยปิดงาน</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#00E676]">✓</span>
+                <span>ชำระเงินตรงเวลา</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="border-b border-gray-100 bg-white py-16">
-        <div class="mx-auto max-w-6xl px-4 text-center">
-          <h2 class="mb-2 text-2xl font-bold text-gray-900">เครือข่ายพาร์ทเนอร์ที่ไว้วางใจเรา</h2>
-          <p class="mb-10 text-sm text-gray-500">ร่วมเป็นส่วนหนึ่งกับเครือข่ายเจ้าของสื่อโฆษณาชั้นนำทั่วประเทศ</p>
-
-          <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">🏢</div>
-              <span class="text-center text-xs font-bold tracking-wide">Bangkok Billboard Co.</span>
-            </div>
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">📍</div>
-              <span class="text-center text-xs font-bold tracking-wide">Transit Media Group</span>
-            </div>
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">🖥</div>
-              <span class="text-center text-xs font-bold tracking-wide">LED Vision Thailand</span>
-            </div>
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">🏢</div>
-              <span class="text-center text-xs font-bold tracking-wide">Global OOH Ads</span>
-            </div>
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">📍</div>
-              <span class="text-center text-xs font-bold tracking-wide">Metro Signage</span>
-            </div>
-            <div class="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-6 text-gray-400 transition-all duration-300 hover:border-purple-200 hover:bg-purple-50 hover:text-[#5800FF]">
-              <div class="mb-2 transform transition-transform duration-300 group-hover:scale-110">🖥</div>
-              <span class="text-center text-xs font-bold tracking-wide">City Screen Network</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="bg-gray-50 py-24">
         <div class="mx-auto max-w-6xl px-4">
-          <div class="mb-16 text-center">
-            <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">ทำไมต้องเข้าร่วมกับ Ad Hub?</h2>
-            <p class="mx-auto max-w-2xl text-lg text-gray-600">ระบบบริหารจัดการที่ออกแบบมาเพื่อช่วยเจ้าของป้ายโดยเฉพาะ</p>
+          <div class="mb-12 text-center">
+            <h2 class="mb-3 text-3xl font-bold text-gray-900">ทำไมเจ้าของป้ายถึงเลือก <span class="text-[#5800FF]">AdHub</span>?</h2>
+            <p class="mx-auto max-w-3xl text-gray-500">รวมเครื่องมือ ทีมขาย และฐานลูกค้าที่ช่วยให้ป้ายของคุณถูกค้นพบง่ายขึ้น พร้อมปิดงานได้เร็วขึ้น</p>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">📈</div>
-              <h3 class="mb-3 text-xl font-bold text-gray-900">เพิ่มอัตราการขาย (Occupancy)</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                นำพื้นที่โฆษณาของคุณเข้าสู่ระบบค้นหาที่แบรนด์และเอเจนซี่ใช้งานเป็นประจำ ช่วยลดโอกาสที่ป้ายจะว่างและเพิ่มรายได้สูงสุด
-              </p>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-3xl text-emerald-500">👥</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">เราหาลูกค้าให้คุณ</h3>
+              <p class="text-sm leading-relaxed text-gray-600">ไม่ต้องเสียเวลาวิ่งหาลูกค้าเอง ระบบช่วยเปิดโอกาสให้แบรนด์และเอเจนซี่เห็นป้ายของคุณ</p>
             </article>
-
-            <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-100 text-2xl text-[#00E676]">💼</div>
-              <h3 class="mb-3 text-xl font-bold text-gray-900">รับเงินชัวร์ ไร้ความเสี่ยง</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                เรามีระบบดูแลเรื่องเอกสาร การวางบิล และการรับชำระเงินจากลูกค้าให้ทั้งหมด เจ้าของป้ายรอรับรายได้ตามกำหนดอย่างมั่นใจ
-              </p>
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 text-3xl text-violet-500">�</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">เพิ่มโอกาสขายป้ายเร็วขึ้น</h3>
+              <p class="text-sm leading-relaxed text-gray-600">ป้ายถูกนำเสนออย่างเป็นระบบ พร้อมข้อมูลครบถ้วน ช่วยให้ลูกค้าตัดสินใจและจองได้ไวขึ้น</p>
             </article>
-
-            <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
-              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-100 text-2xl text-[#5800FF]">🛡</div>
-              <h3 class="mb-3 text-xl font-bold text-gray-900">ระบบจัดการคิว (Inventory)</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                บริหารจัดการสถานะป้าย อัปเดตคิวว่าง-จอง ได้แบบ Real-time ผ่าน Dashboard ส่วนตัว ลดข้อผิดพลาดในการทำงาน
-              </p>
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-50 text-3xl text-green-500">🆓</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">ไม่มีค่าสมัครเริ่มต้น</h3>
+              <p class="text-sm leading-relaxed text-gray-600">เริ่มต้นได้ฟรี คุยกับทีมงานก่อนเพื่อประเมินศักยภาพของป้ายและวางแผนร่วมกัน</p>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-3xl text-emerald-500">🛡️</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">ทีมช่วยปิดงานให้ครบ</h3>
+              <p class="text-sm leading-relaxed text-gray-600">ตั้งแต่ตอบคำถามลูกค้า ไปจนถึงประสานงานการจองและติดตั้ง ช่วยให้คุณโฟกัสกับการดูแลป้ายได้เต็มที่</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="locations" class="relative bg-white py-24">
+      <section class="bg-gray-50 py-14">
         <div class="mx-auto max-w-6xl px-4">
-          <div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
-            <div>
-              <h2 class="mb-8 text-3xl font-bold text-gray-900">เริ่มต้นง่ายๆ ใน 3 ขั้นตอน</h2>
-
-              <div class="relative space-y-8 before:absolute before:inset-0 before:ml-6 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-[#5800FF] before:to-gray-200">
-                <div class="relative flex items-start gap-6">
-                  <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#5800FF] text-xl font-bold text-white shadow-lg ring-4 ring-white">1</div>
-                  <div class="pt-2">
-                    <h4 class="mb-2 text-xl font-bold text-gray-900">ลงทะเบียนพาร์ทเนอร์</h4>
-                    <p class="text-gray-600">กรอกข้อมูลบริษัทและรายละเอียดการติดต่อในฟอร์มด้านข้าง ทีมงานจะติดต่อกลับเพื่อยืนยันตัวตน</p>
-                  </div>
+          <div class="mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-white/10 bg-[#10182f] shadow-[0_20px_60px_rgba(8,15,40,0.35)]">
+            <div class="grid grid-cols-1 gap-6 p-6 md:grid-cols-[1.2fr_1fr] md:p-8">
+              <div class="rounded-2xl bg-white/5 p-4">
+                <div class="overflow-hidden rounded-2xl bg-slate-800">
+                  <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?q=80&w=1200&auto=format&fit=crop" alt="ตัวอย่างป้ายโฆษณา" class="h-56 w-full object-cover" />
                 </div>
+              </div>
 
-                <div class="relative flex items-start gap-6">
-                  <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600 ring-4 ring-white">2</div>
-                  <div class="pt-2">
-                    <h4 class="mb-2 text-xl font-bold text-gray-900">อัปโหลดข้อมูลป้าย</h4>
-                    <p class="text-gray-600">เพิ่มรูปภาพ โลเคชัน สเปก และราคาป้ายโฆษณาของคุณเข้าสู่ระบบหลังบ้าน (Dashboard)</p>
-                  </div>
+              <div class="flex flex-col justify-center text-white">
+                <p class="mb-2 text-sm font-semibold text-cyan-300">ตัวอย่างรายได้จากป้ายของคุณ</p>
+                <h2 class="mb-3 text-2xl font-bold">ป้ายขนาด 3 x 6 เมตร</h2>
+                <p class="mb-5 text-sm text-slate-300">ทำเลถนนหลัก / เขตการค้ากลางเมือง พร้อมข้อมูลและทีมขายช่วยนำเสนออย่างต่อเนื่อง</p>
+                <div class="mb-5 rounded-2xl bg-white/5 p-4">
+                  <p class="text-sm text-slate-300">รายได้ต่อเดือนโดยประมาณ</p>
+                  <p class="mt-2 text-3xl font-bold text-[#00E676]">30,000 - 80,000 บาท / เดือน</p>
+                  <p class="mt-2 text-xs text-slate-400">ขึ้นอยู่กับขนาด ทำเล ประเภทสื่อ และระยะเวลาเช่า</p>
                 </div>
-
-                <div class="relative flex items-start gap-6">
-                  <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-200 text-xl font-bold text-gray-600 ring-4 ring-white">3</div>
-                  <div class="pt-2">
-                    <h4 class="mb-2 text-xl font-bold text-gray-900">รับงานและรายได้</h4>
-                    <p class="text-gray-600">เมื่อมีลูกค้าจองผ่านระบบ ทีมงานจะแจ้งเตือนเพื่อดำเนินการติดตั้ง และรอรับชำระเงินได้เลย</p>
+                <div class="grid grid-cols-2 gap-3 text-sm">
+                  <div class="rounded-2xl bg-white/5 p-4">
+                    <p class="text-slate-300">อัตราการขายเพิ่มขึ้น</p>
+                    <p class="mt-1 text-xl font-bold">30% - 50%</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/5 p-4">
+                    <p class="text-slate-300">ทีมขายช่วยดูแล</p>
+                    <p class="mt-1 text-xl font-bold">ครบทุกขั้นตอน</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+      <section id="services" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-12 text-center">
+            <h2 class="mb-3 text-3xl font-bold text-gray-900">เริ่มต้นง่าย ๆ ใน 4 ขั้นตอน</h2>
+            <p class="mx-auto max-w-3xl text-gray-500">ตั้งแต่ส่งข้อมูลเบื้องต้นจนถึงรับงานจริง ทีมงานช่วยไกด์ทุกขั้นตอน</p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-xl font-bold text-green-600">1</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">ลงทะเบียนข้อมูลคุณ</h3>
+              <p class="text-sm leading-relaxed text-gray-600">กรอกข้อมูลเบื้องต้นเกี่ยวกับบริษัทและช่องทางติดต่อ เพื่อให้ทีมงานประเมินความพร้อม</p>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-violet-100 text-xl font-bold text-violet-600">2</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">ทีมงานช่วยประเมินป้าย</h3>
+              <p class="text-sm leading-relaxed text-gray-600">เราช่วยดูข้อมูลทำเล ประเภทสื่อ และแนวทางตั้งราคาให้เหมาะกับความต้องการตลาด</p>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-xl font-bold text-sky-600">3</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">ลูกค้าส่งคำขอเข้ามา</h3>
+              <p class="text-sm leading-relaxed text-gray-600">เมื่อมีลูกค้าสนใจ ทีมจะประสานงาน พรีเซนต์ข้อมูล และช่วยคัดกรองดีลที่เหมาะสมให้</p>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center shadow-sm">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-xl font-bold text-emerald-600">4</div>
+              <h3 class="mb-2 text-lg font-bold text-gray-900">รับดีลและดูแลต่อได้เลย</h3>
+              <p class="text-sm leading-relaxed text-gray-600">หลังปิดงาน คุณสามารถเดินหน้าติดตั้งและรับรายได้ตามเงื่อนไขที่ตกลงร่วมกัน</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#0f1730] py-10 text-white">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-4 text-center text-sm font-semibold text-slate-300">แบรนด์ที่เคยใช้บริการสื่อของเรา</div>
+          <div class="rounded-3xl border border-white/10 bg-white/5 px-4 py-4">
+            <div class="partner-logo-track items-center gap-8 text-sm font-bold uppercase tracking-[0.22em] text-white/80 md:gap-12">
+              <span class="partner-logo-pill text-center">Samsung</span>
+              <span class="partner-logo-pill text-center">Coca-Cola</span>
+              <span class="partner-logo-pill text-center">AIS</span>
+              <span class="partner-logo-pill text-center">Toyota</span>
+              <span class="partner-logo-pill text-center">true</span>
+              <span class="partner-logo-pill text-center">ptt</span>
+              <span class="partner-logo-pill text-center">Shopee</span>
+              <span class="partner-logo-pill text-center">SCB</span>
+              <span class="partner-logo-pill text-center">Samsung</span>
+              <span class="partner-logo-pill text-center">Coca-Cola</span>
+              <span class="partner-logo-pill text-center">AIS</span>
+              <span class="partner-logo-pill text-center">Toyota</span>
+              <span class="partner-logo-pill text-center">true</span>
+              <span class="partner-logo-pill text-center">ptt</span>
+              <span class="partner-logo-pill text-center">Shopee</span>
+              <span class="partner-logo-pill text-center">SCB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" class="relative bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="mb-10 text-center">
+            <h2 class="mb-3 text-3xl font-bold text-gray-900">เสียงจากเจ้าของป้ายที่ร่วมงานกับเรา</h2>
+            <p class="mx-auto max-w-3xl text-gray-500">ประสบการณ์จริงจากพาร์ทเนอร์ที่ใช้ AdHub ช่วยเพิ่มโอกาสขายและลดเวลาทำงานหลังบ้าน</p>
+          </div>
+
+          <div class="mb-16 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+              <p class="mb-5 text-sm leading-relaxed text-gray-600">“แต่ก่อนป้ายว่างนานมาก พอเข้าระบบแล้วมีทีมช่วยหาลูกค้าให้สม่ำเสมอ ทำให้มีโอกาสปิดงานง่ายขึ้น”</p>
+              <div>
+                <p class="font-bold text-gray-900">คุณวิชัย</p>
+                <p class="text-xs text-gray-500">เจ้าของป้าย LED</p>
+              </div>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+              <p class="mb-5 text-sm leading-relaxed text-gray-600">“ชอบที่ทีมช่วยจัดข้อมูลป้ายและตอบลูกค้าให้ ทำให้เราโฟกัสงานหน้างานได้มากขึ้น ไม่ต้องคอยรับทุกดีลเอง”</p>
+              <div>
+                <p class="font-bold text-gray-900">คุณกัญญา</p>
+                <p class="text-xs text-gray-500">เจ้าของเครือข่ายบิลบอร์ด</p>
+              </div>
+            </article>
+            <article class="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+              <p class="mb-5 text-sm leading-relaxed text-gray-600">“ระบบช่วยให้ป้ายของเราดูเป็นมืออาชีพขึ้น ลูกค้าตัดสินใจเร็วขึ้น และมีโอกาสขายได้หลายช่วงเวลามากกว่าเดิม”</p>
+              <div>
+                <p class="font-bold text-gray-900">คุณมนตรี</p>
+                <p class="text-xs text-gray-500">เจ้าของสื่อ Transit</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
+            <div id="partner-form" class="rounded-3xl border border-gray-100 bg-white p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
               <h3 class="mb-2 text-2xl font-bold text-gray-900">สมัครเข้าร่วมเครือข่าย</h3>
               <p class="mb-8 text-sm text-gray-500">กรอกข้อมูลเบื้องต้น เพื่อให้เจ้าหน้าที่ติดต่อกลับนำเสนอระบบ</p>
 
@@ -273,45 +369,30 @@
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="bg-gray-50 py-20">
-        <div class="mx-auto max-w-5xl px-4">
-          <div class="mb-12 text-center">
-            <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">Partner FAQ</p>
-            <h2 class="text-3xl font-bold text-gray-900">คำถามที่เจ้าของสื่อมักถามก่อนเข้าร่วมเครือข่าย</h2>
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <article class="rounded-2xl border border-gray-100 bg-white p-6">
-              <h3 class="mb-3 text-lg font-bold text-gray-900">ต้องมีป้ายกี่ป้ายถึงจะสมัครได้?</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                สามารถเริ่มต้นได้ตั้งแต่เจ้าของสื่อรายเล็กไปจนถึงเครือข่ายสื่อขนาดใหญ่ เพราะระบบถูกออกแบบให้รองรับ inventory หลายระดับ
-              </p>
-            </article>
-
-            <article class="rounded-2xl border border-gray-100 bg-white p-6">
-              <h3 class="mb-3 text-lg font-bold text-gray-900">มีค่าใช้จ่ายเริ่มต้นหรือไม่?</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                ขั้นตอนเริ่มต้นเป็นการพูดคุยข้อมูลและประเมินความเหมาะสมของการเข้าร่วมเครือข่าย เพื่อให้เจ้าของสื่อเข้าใจระบบและโอกาสการขายก่อน
-              </p>
-            </article>
-
-            <article class="rounded-2xl border border-gray-100 bg-white p-6">
-              <h3 class="mb-3 text-lg font-bold text-gray-900">ทีมงานช่วยเรื่องข้อมูลป้ายไหม?</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                ช่วยทั้งการจัดข้อมูล รูปภาพ สเปกทำเล และแนวทางการนำเสนอ inventory เพื่อให้เอเจนซี่และแบรนด์ตัดสินใจได้ง่ายขึ้น
-              </p>
-            </article>
-
-            <article class="rounded-2xl border border-gray-100 bg-white p-6">
-              <h3 class="mb-3 text-lg font-bold text-gray-900">ใครเหมาะกับการเข้าร่วม?</h3>
-              <p class="text-sm leading-relaxed text-gray-600">
-                เหมาะกับเจ้าของป้าย billboard, digital signage, transit media และผู้ดูแลเครือข่ายสื่อที่ต้องการเพิ่มรายได้และลดภาระงานหลังบ้าน
-              </p>
-            </article>
+            <div class="flex flex-col justify-center rounded-[28px] bg-[#0f1730] p-8 text-white shadow-[0_20px_60px_rgba(8,15,40,0.25)]">
+              <p class="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">พร้อมเริ่มต้นหรือยัง</p>
+              <h2 class="mb-4 text-3xl font-bold leading-tight">อย่าปล่อยให้ป้ายของคุณว่างเปล่า<br />นานกว่าที่ควร</h2>
+              <p class="mb-8 text-slate-300">คุยกับทีมงานวันนี้เพื่อประเมินศักยภาพป้ายของคุณ และดูว่ารูปแบบการร่วมงานแบบไหนเหมาะที่สุดกับพื้นที่ของคุณ</p>
+              <div class="flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row">
+                <a href="#partner-form" class="flex items-center justify-center rounded-xl bg-[#00E676] px-6 py-4 font-bold text-gray-900 transition hover:bg-[#00C853]">
+                  ลงขายป้ายฟรี
+                </a>
+                <a href="https://lin.ee/uL7rmU2a" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-4 font-bold text-white transition hover:bg-white/10">
+                  คุยกับทีมงานทาง LINE
+                </a>
+              </div>
+              <div class="mt-8 grid grid-cols-2 gap-4 text-sm text-slate-300">
+                <div class="rounded-2xl bg-white/5 p-4">
+                  <p class="text-2xl font-bold text-white">100+</p>
+                  <p>เจ้าของป้ายที่ร่วมงาน</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-4">
+                  <p class="text-2xl font-bold text-white">24 ชม.</p>
+                  <p>ตอบกลับเบื้องต้นโดยทีมงาน</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -388,7 +469,10 @@
 
           <div class="flex flex-col items-center justify-between border-t border-white/10 pt-6 text-center text-xs text-gray-500 md:flex-row md:text-left">
             <p>&copy; 2026 AdHub Marketplace. All rights reserved.</p>
-            <p class="mt-2 md:mt-0">info@adhubmarketplace.com</p>
+            <div class="mt-2 flex flex-col items-center gap-2 md:mt-0 md:flex-row md:gap-4">
+              <a href="https://docs.google.com/document/d/1_FllfJf9goJTKwMRAr-flVeMOg4wmuaRVl8Hq-vTJ1c/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-white">Privacy Policy</a>
+              <p>info@adhubmarketplace.com</p>
+            </div>
           </div>
         </div>
       </footer>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบสอบถามความพึงพอใจ — AdHub</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;padding:20px}
+  .form-wrap{max-width:680px;margin:0 auto;padding:24px 0 40px}
+  .brand-bar{background:#185FA5;border-radius:12px;padding:20px 22px;margin-bottom:20px}
+  .brand-bar h1{margin:0 0 6px;font-size:20px;font-weight:600;color:#fff}
+  .brand-bar p{margin:0;font-size:14px;color:#B5D4F4;line-height:1.6}
+  .benefit-pill{display:inline-flex;align-items:center;gap:6px;background:#0C447C;border-radius:20px;padding:5px 12px;font-size:12px;color:#85B7EB;margin-top:10px}
+  .q-card{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .q-label{font-size:12px;font-weight:600;color:#888;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+  .q-title{font-size:15px;font-weight:600;color:#1a1a1a;margin-bottom:14px;line-height:1.5}
+  .chip-group{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{cursor:pointer;border:1px solid #ddd;border-radius:20px;padding:7px 14px;font-size:13px;color:#333;background:#f9f9f9;transition:all .15s;user-select:none;font-family:inherit}
+  .chip:hover{border-color:#185FA5;color:#185FA5}
+  .chip.active{background:#E6F1FB;border-color:#185FA5;color:#0C447C;font-weight:600}
+  .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .media-card{cursor:pointer;border:1px solid #ddd;border-radius:10px;padding:14px 10px;text-align:center;background:#f9f9f9;transition:all .15s}
+  .media-card:hover{border-color:#185FA5}
+  .media-card.active{background:#E6F1FB;border-color:#185FA5}
+  .media-card .icon{font-size:26px;margin-bottom:6px}
+  .media-card .name{font-size:13px;font-weight:600;color:#1a1a1a}
+  .media-card .desc{font-size:11px;color:#888;margin-top:3px}
+  .star-row{display:flex;gap:8px;font-size:32px;cursor:pointer}
+  .star{color:#ddd;transition:color .1s}
+  .star.lit{color:#BA7517}
+  .star-label{font-size:13px;color:#888;margin-top:8px}
+  textarea,input[type=text],input[type=url]{width:100%;font-size:14px;padding:10px 13px;border:1px solid #ddd;border-radius:8px;background:#f9f9f9;color:#1a1a1a;font-family:inherit;margin-bottom:8px}
+  textarea{min-height:90px;resize:vertical}
+  textarea:focus,input:focus{outline:none;border-color:#185FA5;background:#fff}
+  .backlink-card{background:#E6F1FB;border:1px solid #185FA5;border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .backlink-card .q-label{color:#0C447C}
+  .backlink-card .q-title{color:#0C447C}
+  .backlink-note{font-size:12px;color:#185FA5;margin-top:6px;line-height:1.6}
+  .submit-btn{width:100%;padding:14px;font-size:16px;font-weight:600;border-radius:10px;background:#185FA5;color:#fff;border:none;cursor:pointer;transition:background .15s;font-family:inherit}
+  .submit-btn:hover{background:#0C447C}
+  .submit-btn:disabled{background:#bbb;cursor:default}
+  .success-box{display:none;background:#EAF3DE;border:1px solid #3B6D11;border-radius:12px;padding:28px;text-align:center;margin-top:16px}
+  .success-box .s-icon{font-size:40px;margin-bottom:10px}
+  .success-box h2{color:#27500A;font-size:18px;margin-bottom:8px}
+  .success-box p{color:#3B6D11;font-size:14px;line-height:1.7}
+  @media(max-width:480px){.media-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="form-wrap">
+
+  <div class="brand-bar">
+    <h1>แบบสอบถามความพึงพอใจ — AdHub</h1>
+    <p>ขอบคุณที่ไว้วางใจใช้บริการสื่อโฆษณากับเรา<br>ทุกความคิดเห็นมีค่ามากครับ</p>
+    <div class="benefit-pill">&#10003; ตอบแบบสอบถาม รับ backlink ฟรีบน adhubmarketplace.com</div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 1</div>
+    <div class="q-title">คุณใช้สื่อโฆษณาประเภทใดกับ AdHub? (เลือกได้มากกว่า 1)</div>
+    <div class="media-grid">
+      <div class="media-card" onclick="toggleMedia(this,'billboard')">
+        <div class="icon">&#128247;</div>
+        <div class="name">ป้ายโฆษณา</div>
+        <div class="desc">Billboard / OOH</div>
+      </div>
+      <div class="media-card" onclick="toggleMedia(this,'mobile')">
+        <div class="icon">&#128652;</div>
+        <div class="name">สื่อเคลื่อนที่</div>
+        <div class="desc">รถแห่ / รถตุ๊กๆ</div>
+      </div>
+      <div class="media-card" onclick="toggleMedia(this,'digital')">
+        <div class="icon">&#128187;</div>
+        <div class="name">สื่อดิจิทัล</div>
+        <div class="desc">Digital Screen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 2</div>
+    <div class="q-title">ก่อนทำโฆษณา คุณต้องการอะไรมากที่สุด?</div>
+    <div class="chip-group" id="q2">
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากให้คนรู้จักแบรนด์มากขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากให้งาน / event มีคนมาเยอะขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากเพิ่มยอดขาย</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากสร้าง brand awareness ระยะยาว</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากเข้าถึงกลุ่มลูกค้าเฉพาะ</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อยากโปรโมตสินค้าใหม่</div>
+      <div class="chip" onclick="toggleChip(this,'q2')">อื่นๆ</div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 3</div>
+    <div class="q-title">หลังจากใช้สื่อโฆษณากับ AdHub แล้ว เกิดอะไรขึ้น?</div>
+    <div class="chip-group" id="q3">
+      <div class="chip" onclick="toggleChip(this,'q3')">คนพูดถึงแบรนด์เยอะขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">มีคนทักถาม / สอบถามเข้ามาเพิ่มขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">ยอดขายเพิ่มขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">คนเห็นชัดมาก จำแบรนด์ได้</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">traffic หน้าร้าน / งานเพิ่มขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">ลูกค้าใหม่เพิ่มขึ้น</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">ได้รับ feedback บวกจากลูกค้า</div>
+      <div class="chip" onclick="toggleChip(this,'q3')">ยังไม่เห็นผลชัดเจน</div>
+    </div>
+  </div>
+
+  <!-- Q4 Stars -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 4 — ระดับความพึงพอใจ</div>
+    <div class="q-title">คุณพอใจกับการใช้บริการ AdHub มากแค่ไหน?</div>
+    <div class="star-row" id="stars">
+      <span class="star" onclick="rateStar(1)">&#9733;</span>
+      <span class="star" onclick="rateStar(2)">&#9733;</span>
+      <span class="star" onclick="rateStar(3)">&#9733;</span>
+      <span class="star" onclick="rateStar(4)">&#9733;</span>
+      <span class="star" onclick="rateStar(5)">&#9733;</span>
+    </div>
+    <p class="star-label" id="star-label">แตะดาวเพื่อให้คะแนน</p>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 5</div>
+    <div class="q-title">อยากบอกอะไรกับคนที่กำลังคิดจะใช้ป้ายโฆษณา?</div>
+    <div class="chip-group" id="q5" style="margin-bottom:10px">
+      <div class="chip" onclick="toggleChip(this,'q5')">ป้ายใหญ่ช่วยได้จริง คนเห็นชัด</div>
+      <div class="chip" onclick="toggleChip(this,'q5')">คนจำได้ ได้ผลระยะยาว</div>
+      <div class="chip" onclick="toggleChip(this,'q5')">คุ้มค่ากว่าที่คิด</div>
+      <div class="chip" onclick="toggleChip(this,'q5')">ควรเลือกทำเลให้ดีก่อน</div>
+      <div class="chip" onclick="toggleChip(this,'q5')">แนะนำให้ลองทำดู</div>
+      <div class="chip" onclick="toggleChip(this,'q5')">ดีกว่าโฆษณาออนไลน์อย่างเดียว</div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-card">
+    <div class="q-label">ข้อที่ 6</div>
+    <div class="q-title">ข้อเสนอแนะอื่นๆ (ถ้ามี)</div>
+    <textarea id="suggestion" placeholder="บอกเราได้เลยครับ อยากให้ AdHub ปรับปรุงอะไร หรือมีข้อคิดเห็นเพิ่มเติม..."></textarea>
+  </div>
+
+  <!-- Backlink -->
+  <div class="backlink-card">
+    <div class="q-label">รับ Backlink ฟรี</div>
+    <div class="q-title">ระบุ URL เว็บไซต์เพื่อรับ backlink บน adhubmarketplace.com</div>
+    <input type="url" id="website" placeholder="https://www.yourwebsite.com">
+    <input type="text" id="bizname" placeholder="ชื่อแบรนด์ / บริษัทของคุณ">
+    <p class="backlink-note">AdHub จะลิงก์กลับไปยังเว็บของคุณบนหน้า testimonials ของ adhubmarketplace.com ภายใน 3-5 วันทำการ ฟรี ไม่มีค่าใช้จ่าย</p>
+  </div>
+
+  <button class="submit-btn" id="submitBtn" onclick="submitForm()">ส่งแบบสอบถาม</button>
+
+  <div class="success-box" id="successBox">
+    <div class="s-icon">&#10003;</div>
+    <h2>ขอบคุณมากครับ!</h2>
+    <p>ความคิดเห็นของคุณถูกบันทึกแล้ว<br>ทีม AdHub จะเพิ่ม backlink ของคุณภายใน 3-5 วันทำการ</p>
+  </div>
+
+</div>
+<script>
+let selectedMedia=[];
+let selections={q2:[],q3:[],q5:[]};
+let starRating=0;
+function toggleMedia(el,type){
+  el.classList.toggle('active');
+  if(selectedMedia.includes(type)){selectedMedia=selectedMedia.filter(x=>x!==type);}
+  else{selectedMedia.push(type);}
+}
+function toggleChip(el,group){
+  el.classList.toggle('active');
+  var txt=el.textContent;
+  if(selections[group].includes(txt)){selections[group]=selections[group].filter(x=>x!==txt);}
+  else{selections[group].push(txt);}
+}
+function rateStar(n){
+  starRating=n;
+  var stars=document.querySelectorAll('#stars .star');
+  var labels=['','แย่มาก','พอใช้','ปานกลาง','ดีมาก','ยอดเยี่ยม!'];
+  stars.forEach(function(s,i){s.classList.toggle('lit',i<n);});
+  document.getElementById('star-label').textContent=labels[n]+' ('+n+'/5)';
+}
+function submitForm(){
+  var btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  btn.textContent='กำลังส่ง...';
+  setTimeout(function(){
+    btn.style.display='none';
+    document.getElementById('successBox').style.display='block';
+  },800);
+}
+</script>
+</body>
+</html>
